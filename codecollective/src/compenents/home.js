@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const Home = () => (
     <div>
@@ -10,3 +10,5 @@ const Home = () => (
         </p>
     </div>
 )
+
+export default Home
