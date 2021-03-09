@@ -24,7 +24,7 @@ const authRoutes = require("./routes/authRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 
 app.use(
-  authRoutes,
+  authRoutes, 
   htmlRoutes
 );
 
