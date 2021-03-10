@@ -2,7 +2,7 @@
 const { MongoClient } = require("mongodb");
 
 // This sets up my mongo url to my free cluster
-const url = "mongodb+srv://new-user:<password>@cluster0.z4zua.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const url = "mongodb+srv://new-user:vuSs8WDXTRGD4Cf6@cluster0.z4zua.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 // This function connects to the cluster and catches any errors
