@@ -9,6 +9,11 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 8080;
 const db = require("./db");
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingcollective", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
+
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 app.use(express.urlencoded({ extended: true }));
