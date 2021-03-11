@@ -4,10 +4,12 @@ branches:
   only:
     - master
     - main
+    - MBO
 cache:
   directories:
     - node_modules
 services:
   - mongodb
-before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS testdb;'
+before_script: 
+  - sleep 15
+  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
