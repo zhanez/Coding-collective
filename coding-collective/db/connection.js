@@ -19,3 +19,4 @@ async function run () {
 
 // This calls the function so it starts the connection 
 run().catch(console.dir);
+
