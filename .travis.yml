@@ -1,0 +1,16 @@
+language: node_js,
+node_js: "12"
+branches:
+  only:
+    - master
+    - main
+    - MBO
+cache:
+  directories:
+    - node_modules
+services:
+  - mongodb
+  - react
+# before_script: 
+#   - sleep 15
+#   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
