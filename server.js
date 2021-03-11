@@ -3,7 +3,8 @@ const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongostore")(session);
 // Requiring passport as we've configured it
-const passport = require("./config/passport");
+const passport = require("passport");
+require("./config/passport")
 const mongoose = require("mongoose");
 
 // Setting up port and requiring models for syncing

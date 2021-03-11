@@ -3,12 +3,13 @@ const User = require("../models/user");
 const passport = require("passport-local");
 const LocalStrategy = require("passport-local").Strategy;
 
-passport.serializeUser((user, done) => {
-  done(null, user.user.id);
+module.exports = (passport) => {
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-  User.findById(id, (err, user) => {
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
     done(err, user);
   });
 });
@@ -48,5 +49,5 @@ passport.use(
     });
   })
 );
+}
 
-module.exports = passport;
