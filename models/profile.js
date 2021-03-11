@@ -16,7 +16,7 @@ const profileSchema = new Schema({
         type: mongoose.SchemaTypes.Email,
         required: true
     }
-})
+});
 
 
 
