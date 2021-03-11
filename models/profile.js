@@ -18,10 +18,5 @@ const profileSchema = new Schema({
     }
 });
 
-
-
-
-
-
 const Profile =mongoose.model("Profile", profileSchema);
 export default Profile;
