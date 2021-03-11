@@ -13,7 +13,7 @@ const ThirdPartiesSchema = new mongoose.Schema ({
         type: {},
         default: null
     }
-})
+});
 
 const UserSchema = new mongoose.Schema({
     name: {
