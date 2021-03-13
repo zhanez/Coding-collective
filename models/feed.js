@@ -7,8 +7,12 @@ const feedSchema = new Schema({
         required: true
     },
     date: 
-    { type: Date, default: Date.now }
-})
+    { type: Date, default: Date.now },
+    post_id: { 
+        type: String, 
+        default: null
+    }
+});
 
 const Feed =mongoose.model("Profile", feedSchema);
 module.exports = Feed;

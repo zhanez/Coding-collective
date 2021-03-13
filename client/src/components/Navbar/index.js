@@ -24,7 +24,7 @@ function Navbar() {
             Home
           </Link>
 
-          <Link className="navbar-item">
+          <Link className="navbar-item" to="/feed">
             Community
           </Link>
 
