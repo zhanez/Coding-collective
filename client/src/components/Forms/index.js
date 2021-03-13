@@ -24,7 +24,8 @@ export function SignupForm() {
 
 export function LoginForm() {
     return (
-      <form class="box">
+      <div className="columns">
+      <form class="box column is-three-fifths is-offset-one-fifth mt-5">
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
@@ -39,7 +40,9 @@ export function LoginForm() {
           </div>
         </div>
   
-        <button class="button is-primary">Sign in</button>
+        <button class="button is-primary">Login</button>
+        <button class="button is-primary pl-5">Go Back</button>
       </form>
+      </div>
     );
   }
