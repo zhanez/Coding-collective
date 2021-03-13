@@ -16,12 +16,7 @@ const profileSchema = new Schema({
         type: mongoose.SchemaTypes.Email,
         required: true
     }
-})
-
-
-
-
-
+});
 
 const Profile =mongoose.model("Profile", profileSchema);
 export default Profile;
