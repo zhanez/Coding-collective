@@ -17,7 +17,7 @@ export function SignupForm() {
         </div>
       </div>
 
-      <button class="button is-primary">Sign in</button>
+      <button class="button is-primary">Sign Up</button>
     </form>
   );
 }
