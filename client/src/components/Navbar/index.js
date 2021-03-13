@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import cclogo from "../Image/cclogo_long.gif";
 
 function Navbar() {
   return (
-    <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-black" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <img src="https://bulma.io/images/bulma-logo.png" alt="logo" width="112" height="28" />
+          <img src= {cclogo} alt="logo" width="112" height="28" />
         </Link>
 
         <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -21,6 +22,10 @@ function Navbar() {
         <div className="navbar-start">
           <Link className="navbar-item" to="/">
             Home
+          </Link>
+
+          <Link className="navbar-item">
+            Community
           </Link>
 
           <Link className="navbar-item">
