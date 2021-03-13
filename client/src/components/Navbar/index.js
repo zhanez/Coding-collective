@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
+import cclogo from "../Image/cclogo_long.gif";
 
 function Navbar() {
   return (
-    <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-black" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" alt="logo" width="112" height="28" />
+          <img src= {cclogo} alt="logo" width="225" height="50" />
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
