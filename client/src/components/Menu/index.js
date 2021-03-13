@@ -2,7 +2,7 @@ function Menu() {
     return(
         <aside class="menu">
         <ul class="menu-list">
-            <li><a>Home</a></li>
+            <li><a>Newsfeed</a></li>
             <li><a>My Profile</a></li>
             <li>
             <a class="is-active">Classmates</a>
