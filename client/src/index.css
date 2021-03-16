@@ -24,9 +24,9 @@ font-weight: bold;
    
   
 .container {
-  color: blue;
-  /* opacity: 70%; */
- /* box-shadow: #fff; */
+color: blue;
+opacity: 90%;
+box-shadow: orange;
 
 }
 
@@ -48,7 +48,6 @@ animation: glow 1s ease-in-out infinite alternate;
   }
 } 
 #button{
-/* height:3px; */
 margin: 10px auto; 
 display: flex;
 justify-content: center;
