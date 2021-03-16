@@ -2,7 +2,8 @@ import React from "react";
 
 export function SignupForm() {
   return (
-    <form class="box">
+    
+    <form class="box column is-three-fifths is-offset-one-fifth ">
       <div class="field">
         <label class="label">Email</label>
         <div class="control">
@@ -24,6 +25,7 @@ export function SignupForm() {
 
 export function LoginForm() {
     return (
+      
       <div className="columns">
       <form class="box column is-three-fifths is-offset-one-fifth mt-5">
         <div class="field">
@@ -39,9 +41,10 @@ export function LoginForm() {
             <input class="input" type="password" placeholder="********" />
           </div>
         </div>
-  
-        <button class="button is-primary">Login</button>
-        <button class="button is-primary pl-5">Go Back</button>
+      
+        <button id="button" class="button is-primary ">Login</button>
+
+        <button id="button" class="button is-primary ">Go Back</button>
       </form>
       </div>
     );
