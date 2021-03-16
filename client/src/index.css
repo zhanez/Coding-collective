@@ -1,5 +1,62 @@
+/* @import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  /* margin: 2px;
+  padding: 5px; */
+  background-image: url("https://i.gifer.com/5J73.gif");
+  font-family: 'sans-serif';
+  /* background:fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50%;
+  
 }
+
+h1 {
+text-align: center;
+/* font-size: 80px; */
+font-family: sans-serif;
+/* margin: 4rem; */
+font-weight: bold;
+
+
+}
+   
+  
+.container {
+color: blue;
+opacity: 90%;
+box-shadow: orange;
+
+}
+
+
+.glow {
+font-size: 70px;
+color: #fff;
+text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+-webkit-animation: glow 1s ease-in-out infinite alternate;
+-moz-animation: glow 1s ease-in-out infinite alternate;
+animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    color: orange;
+    text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+  }
+} 
+#button{
+margin: 10px auto; 
+display: flex;
+justify-content: center;
+align-items: center;
+  
+} 
+
+.box{
+  padding-bottom: 20px;
+}
+
