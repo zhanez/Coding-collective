@@ -7,7 +7,6 @@ const MongoStore = require("connect-mongostore")(session);
 const passport = require("passport");
 require("./config/passport")
 const mongoose = require("mongoose");
-const routes = require("./routes")
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3001;
@@ -27,7 +26,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes
-app.use(routes);
+app.use( "/api", require("./routes/authentication") );
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 
 // Syncing our database and logging a message to the user upon success
 // db.sequelize.sync().then(() => {
