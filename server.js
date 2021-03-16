@@ -18,7 +18,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/codingcol
 
 
 app.use(passport.initialize());
-app.use(passport.session());
+// Passport config
+passport.use( require("./config/jwtPassportStrategy") );
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
