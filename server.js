@@ -26,10 +26,6 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes
 
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
 // Syncing our database and logging a message to the user upon success
 // db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
