@@ -31,7 +31,7 @@ function Navbar() {
             Profile
           </Link>
 
-          <Link className="navbar-item">
+          <Link className="navbar-item" to="/about">
             About Us
           </Link>
         </div>

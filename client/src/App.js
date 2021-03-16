@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Community from "./pages/Community";
 import Profile from "./pages/Profile";
+import About from "./pages/About";
 
 
 // class App extends Component {
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/community" component={Community} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/about" component={About} />
         </Wrapper>
       </div>
     </BrowserRouter>
