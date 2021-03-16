@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Community from "./pages/Community";
 
 // class App extends Component {
 //   render() {
@@ -31,6 +32,7 @@ function App() {
         <Wrapper>
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/community" component={Community} />
         </Wrapper>
       </div>
     </BrowserRouter>
