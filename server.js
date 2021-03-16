@@ -3,6 +3,7 @@ require("dotenv").config()
 const express = require("express");
 const passport = require("passport");
 const mongoose = require("mongoose");
+const routes = require("./routes")
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3001;

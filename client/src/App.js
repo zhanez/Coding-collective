@@ -7,6 +7,7 @@ import Wrapper from "./components/Wrapper";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
+import { useAuthTokenStore } from "./utils/auth";
 
 
 // class App extends Component {
@@ -26,6 +27,9 @@ import Profile from "./pages/Profile";
 // }
 
 function App() {
+
+  useAuthTokenStore();
+
   return (
     <BrowserRouter basename='/'>
       <div>
