@@ -1,11 +1,7 @@
 // Requiring necessary npm packages
 require("dotenv").config()
 const express = require("express");
-const session = require("express-session");
-const MongoStore = require("connect-mongostore")(session);
-// Requiring passport as we've configured it
 const passport = require("passport");
-require("./config/passport")
 const mongoose = require("mongoose");
 
 // Setting up port and requiring models for syncing
@@ -27,9 +23,8 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes
 app.use( "/api", require("./routes/authentication") );
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
+app.use(routes)
 
 
 // Syncing our database and logging a message to the user upon success
