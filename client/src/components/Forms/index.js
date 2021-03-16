@@ -18,7 +18,7 @@ export function SignupForm() {
         </div>
       </div>
 
-      <button class="button is-primary">Sign Up</button>
+      <button id="button" class="button is-primary">Sign Up</button>
     </form>
   );
 }
@@ -41,11 +41,12 @@ export function LoginForm() {
             <input class="input" type="password" placeholder="********" />
           </div>
         </div>
-      
-        <button id="button" class="button is-primary ">Login</button>
-
-        <button id="button" class="button is-primary ">Go Back</button>
+      <div class="buttons is-center">
+        <button id="button" class="button is-primary is-hovered ">Login</button>
+        <button id="button" class="button is-primary is-hovered">Go Back</button>
+      </div>
       </form>
       </div>
+
     );
   }
