@@ -27,6 +27,9 @@ function Navbar() {
           <Link className="navbar-item" to="/feed">
             Community
           </Link>
+          <Link className="navbar-item" to="/profile">
+            Profile
+          </Link>
 
           <Link className="navbar-item">
             About Us
