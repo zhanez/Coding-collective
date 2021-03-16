@@ -1,5 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {SignupForm} from "../components/Forms";
+import API from "../utils/API";
+
+function SignupPage() {
+  const [users, setUsers] = useState([]);
+  
+  useEffect(() => {
+
+    API 
+      .getUsers()
+      .then (({ data }) => {
+        setUsers(data);
+      });
+  }, [setUsers]);
+
+  console.log(users);
+
+}
 
 function Signup() {
   return (
