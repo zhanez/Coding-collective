@@ -14,19 +14,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/codingcol
   useNewUrlParser: true
 });
 
-// Creating express app and configuring middleware needed for authentication
-const app = express();
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static("client/build"));
-app.use(
-  session({
-    secret: "so secret this should be",
-    resave: false,
-    saveUninitialized: true,
-    store: new MongoStore({ mongooseConnection: mongoose.connection })
-  })
-);
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -36,13 +23,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-const authRoutes = require("./routes/authRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+// Define API routes
 
-app.use(
-  authRoutes, 
-  htmlRoutes
-);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Syncing our database and logging a message to the user upon success
 // db.sequelize.sync().then(() => {
