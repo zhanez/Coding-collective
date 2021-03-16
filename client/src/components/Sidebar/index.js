@@ -3,7 +3,7 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div className="column">
+    <div className="column is-one-quarter">
     <aside class="menu">
       <p class="menu-label">
         General

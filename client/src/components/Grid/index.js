@@ -1,9 +1,13 @@
 import React from "react";
 
-function Columns(props) {
-    return (
-        <div className="columns is-mobile">{props.children}</div>
-    );
+export function Container(props) {
+  return(
+    <div className="container mt-5" style={{ width: 2000 }}>{props.children}</div>
+  );
 }
 
-export default Columns;
+export function Columns(props) {
+    return (
+        <div className="columns is-desktop">{props.children}</div>
+    );
+}
