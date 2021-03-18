@@ -32,12 +32,21 @@ export function SignupForm() {
 
   return (
     <form onSubmit={handleSubmit} class="box column is-three-fifths is-offset-one-fifth ">
-      <div class="field">
-        <label class="label">Name</label>
-        <div class="control">
-          <input class="input" type="Name" ref={passwordRef} placeholder="********" />
-        </div>
-      </div>
+      <div class="field-group">
+ <div class="field is-inline-block-desktop">
+  <label class="label">First Name</label>
+  <div class="control">
+   <input class="input" type="text" placeholder="e.g Alex"/>
+  </div>
+ </div>
+
+<div class="field is-inline-block-desktop">
+ <label class="label">Last Name</label>
+ <div class="control">
+  <input class="input" type="text" placeholder="e.g Smith" />
+ </div>
+ </div>
+</div>
       
       <div class="field">
         <label class="label">Email</label>
