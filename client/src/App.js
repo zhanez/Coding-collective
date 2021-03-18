@@ -9,7 +9,7 @@ import Signup from "./pages/Signup";
 import Community from "./pages/Community";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
-
+import { useAuthTokenStore } from "./utils/auth";
 
 // class App extends Component {
 //   render() {
@@ -28,6 +28,9 @@ import About from "./pages/About";
 // }
 
 function App() {
+
+  useAuthTokenStore();
+
   return (
     <BrowserRouter basename='/'>
       <div>

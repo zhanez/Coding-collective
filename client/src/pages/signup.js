@@ -1,11 +1,9 @@
 import React from "react";
 import {SignupForm} from "../components/Forms";
-// import background from "../images/pineapple.jpg";
 
 function Signup() {
   return (
-    // <div style={{backgroundImage:`url(${background})`}} >
-      <div className="collective">
+    <div>
       <h1 className="glow">Create Account</h1>
       <div className="container">
       <SignupForm />
