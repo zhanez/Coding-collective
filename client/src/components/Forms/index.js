@@ -51,6 +51,34 @@ export function SignupForm() {
         </div>
       </div>
 
+      <div class="field">
+        <label class="label">Github URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Linkedin URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Facebook URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Instagram URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+        </div>
+      </div>
+
       <div class="buttons is-center">
         <button id="button" class="button is-primary is-hovered">Sign Up</button>
         <button id="button" class="button is-primary is-hovered" to="/">Go Back</button>
