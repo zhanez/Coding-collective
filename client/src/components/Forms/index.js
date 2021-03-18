@@ -70,28 +70,28 @@ export function SignupForm() {
       <div class="field">
         <label class="label">Github URL</label>
         <div class="control">
-          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+          <input class="input" type="URL" ref={passwordRef} placeholder="Github" />
         </div>
       </div>
 
       <div class="field">
         <label class="label">Linkedin URL</label>
         <div class="control">
-          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+          <input class="input" type="URL" ref={passwordRef} placeholder="Linkedin" />
         </div>
       </div>
 
       <div class="field">
         <label class="label">Facebook URL</label>
         <div class="control">
-          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+          <input class="input" type="URL" ref={passwordRef} placeholder="Facebook" />
         </div>
       </div>
 
       <div class="field">
         <label class="label">Instagram URL</label>
         <div class="control">
-          <input class="input" type="URL" ref={passwordRef} placeholder="********" />
+          <input class="input" type="URL" ref={passwordRef} placeholder="Instagram" />
         </div>
       </div>
 
