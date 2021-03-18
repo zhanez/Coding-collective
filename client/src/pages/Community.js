@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Sidebar from "../components/Sidebar";
+import PostInput from "../components/PostInput";
 import {Container, Columns} from "../components/Grid";
 
 function Community() {
     return (
       <Container>
-      <Columns>
-        <Sidebar />
-        <div className="field-body column">
+        <Columns>
+          <Sidebar />
+          <PostInput />
+        {/* <div className="field-body column">
           <div class="field is-grouped">
             <p class="control is-expanded">
               <input class="input" type="text" placeholder="Find a repository" />
@@ -19,7 +21,7 @@ function Community() {
               </button>
             </p>
           </div>
-        </div>
+        </div> */}
       </Columns>
       </Container>
     );
