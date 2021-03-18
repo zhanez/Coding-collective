@@ -13,7 +13,9 @@ function Profile() {
           <p className="title">Profile</p>
           <form action="/profile" method="post" enctype="multipart/form-data">
             <input type="file" name="avatar" />
+            <input type="submit"/>
           </form>
+          <img src="/uploadImages/72046124.png"/>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
         </div>
         <div className="tile is-child box">
