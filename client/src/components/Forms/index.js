@@ -59,9 +59,10 @@ export function SignupForm() {
         </div>
       </div>
 
-      <button id="button" class="button is-primary">
-        Sign Up
-      </button>
+      <div class="buttons is-center">
+        <button id="button" class="button is-primary is-hovered">Sign Up</button>
+        <button id="button" class="button is-primary is-hovered" to="/">Go Back</button>
+      </div>
     </form>
   );
 }
