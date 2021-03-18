@@ -1,25 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {SignupForm} from "../components/Forms";
 import api from "../utils/api";
 
 function Signup() {
-  const [users, setUsers] = useState([])
   const [formObject, setFormObject] = useState({
     email: "",
     password: ""
   })
-
-  useEffect(() => {
-    loadUsers()
-  }, [])
-
-  function loadUsers() {
-    api.getUsers()
-    .then(res => 
-      setUsers(res.data)
-    )
-    .catch(err => console.log(err));
-  };
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -38,7 +25,6 @@ function Signup() {
           user: "",
           password: ""
         }))
-        .then(() => loadUsers())
         .catch(err => console.log(err));
     }
   };
