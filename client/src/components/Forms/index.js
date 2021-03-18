@@ -31,10 +31,7 @@ export function SignupForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      class="box column is-three-fifths is-offset-one-fifth "
-    >
+    <form onSubmit={handleSubmit} class="box column is-three-fifths is-offset-one-fifth ">
       <div class="field">
         <label class="label">Email</label>
         <div class="control">
@@ -50,12 +47,7 @@ export function SignupForm() {
       <div class="field">
         <label class="label">Password</label>
         <div class="control">
-          <input
-            class="input"
-            type="password"
-            ref={passwordRef}
-            placeholder="********"
-          />
+          <input class="input" type="password" ref={passwordRef} placeholder="********" />
         </div>
       </div>
 
@@ -68,41 +60,15 @@ export function SignupForm() {
 }
 
 export function LoginForm() {
-  const emailRef = useRef();
-  const passwordRef = useRef();
-
-  // Get the helper login function from the `useLogin` hook.
-  const login = useLogin();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const email = emailRef.current.value;
-    const password = passwordRef.current.value;
-
-    try {
-      await login({ email, password });
-
-      // User has been successfully logged in and added to state. Perform any additional actions you need here such as redirecting to a new page.
-    } catch (err) {
-      // Handle error responses from the API
-      if (err.response && err.response.data) console.log(err.response.data);
-    }
-  };
-
   return (
     <div className="columns">
-      <form
-        onSubmit={handleSubmit}
-        class="box column is-three-fifths is-offset-one-fifth mt-5"
-      >
+      <form class="box column is-three-fifths is-offset-one-fifth mt-5">
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
             <input
               class="input"
-              type="text"
-              ref={emailRef}
+              type="email"
               placeholder="e.g. alex@example.com"
             />
           </div>
@@ -111,7 +77,7 @@ export function LoginForm() {
         <div class="field">
           <label class="label">Password</label>
           <div class="control">
-            <input class="input" type="password" ref={passwordRef} placeholder="********" />
+            <input class="input" type="password" placeholder="********" />
           </div>
         </div>
         <div class="buttons is-center">
