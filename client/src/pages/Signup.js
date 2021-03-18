@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {SignupForm} from "../components/Forms";
-import api from "../utils/api";
+import api from "../utils/API";
 
 function Signup() {
   const [formObject, setFormObject] = useState({
