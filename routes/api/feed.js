@@ -3,7 +3,8 @@ const feedController = require("../../controllers/feedcontroller");
 
 router.route("/feed")
     .get(feedController.findAll)
-    .post(feedController.create);
+    .post(feedController.create)
+    .put(feedController.update);
 
 router
     .route("/:id")
