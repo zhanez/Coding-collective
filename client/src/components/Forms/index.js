@@ -31,7 +31,12 @@ export function SignupForm() {
   };
 
   return (
+<<<<<<< HEAD
+    
+    <form class="box column is-three-fifths is-offset-one-fifth mt-5">
+=======
     <form onSubmit={handleSubmit} class="box column is-three-fifths is-offset-one-fifth ">
+>>>>>>> 767d2fce722c3a4167df2b6c2b620d2551aed88e
       <div class="field">
         <label class="label">Email</label>
         <div class="control">
@@ -51,9 +56,16 @@ export function SignupForm() {
         </div>
       </div>
 
+<<<<<<< HEAD
+      <div class="buttons is-center">
+        <button id="button" class="button is-primary is-hovered">Sign Up</button>
+        <button id="button" class="button is-primary is-hovered" to="/">Go Back</button>
+      </div>
+=======
       <button id="button" class="button is-primary">
         Sign Up
       </button>
+>>>>>>> 767d2fce722c3a4167df2b6c2b620d2551aed88e
     </form>
   );
 }
@@ -79,6 +91,12 @@ export function LoginForm() {
             <input class="input" type="password" placeholder="********" />
           </div>
         </div>
+<<<<<<< HEAD
+      <div class="buttons is-center">
+        <button id="button" class="button is-primary is-hovered ">Login</button>
+        <button id="button" class="button is-primary is-hovered" to="/">Go Back</button>
+      </div>
+=======
         <div class="buttons is-center">
           <button id="button" class="button is-primary is-hovered ">
             Login
@@ -87,6 +105,7 @@ export function LoginForm() {
             Go Back
           </button>
         </div>
+>>>>>>> 767d2fce722c3a4167df2b6c2b620d2551aed88e
       </form>
     </div>
   );
