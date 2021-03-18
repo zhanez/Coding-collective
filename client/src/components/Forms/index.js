@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 // import { pass } from "../../../../config/jwtPassportStrategy";
-import api from "../../utils/api";
-import { useLogin } from "../../utils/auth";
+import api from "../../utils/API";
+import {useLogin} from "../../utils/auth";
 
 export function SignupForm() {
   const emailRef = useRef();
