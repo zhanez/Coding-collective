@@ -24,14 +24,14 @@ function Navbar() {
             Home
           </Link>
 
-          <Link className="navbar-item" to="/feed">
+          <Link className="navbar-item" to="/community">
             Community
           </Link>
           <Link className="navbar-item" to="/profile">
             Profile
           </Link>
 
-          <Link className="navbar-item">
+          <Link className="navbar-item" to="/about">
             About Us
           </Link>
         </div>
