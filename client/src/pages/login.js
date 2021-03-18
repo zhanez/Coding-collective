@@ -5,8 +5,10 @@ import {LoginForm} from "../components/Forms";
 function Login() {
   return (
     <div>
-      <h1>Sign in to your account</h1>
+      <h1 className="glow">Sign in</h1>
+      <div className="container">
       <LoginForm />
+      </div>
     </div>
   );
 }
