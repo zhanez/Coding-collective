@@ -32,6 +32,22 @@ export function SignupForm() {
 
   return (
     <form onSubmit={handleSubmit} class="box column is-three-fifths is-offset-one-fifth ">
+      <div class="field-group">
+ <div class="field is-inline-block-desktop">
+  <label class="label">First Name</label>
+  <div class="control">
+   <input class="input" type="text" placeholder="e.g Alex"/>
+  </div>
+ </div>
+
+<div class="field is-inline-block-desktop">
+ <label class="label">Last Name</label>
+ <div class="control">
+  <input class="input" type="text" placeholder="e.g Smith" />
+ </div>
+ </div>
+</div>
+      
       <div class="field">
         <label class="label">Email</label>
         <div class="control">
@@ -48,6 +64,34 @@ export function SignupForm() {
         <label class="label">Password</label>
         <div class="control">
           <input class="input" type="password" ref={passwordRef} placeholder="********" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Github URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="Github" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Linkedin URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="Linkedin" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Facebook URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="Facebook" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Instagram URL</label>
+        <div class="control">
+          <input class="input" type="URL" ref={passwordRef} placeholder="Instagram" />
         </div>
       </div>
 
