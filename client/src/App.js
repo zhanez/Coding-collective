@@ -10,6 +10,9 @@ import Community from "./pages/Community";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import { useAuthTokenStore } from "./utils/auth";
+import GuestRoute from "./components/auth/GuestRoute";
+import PrivateRoute from "./components/auth/PrivateRoute"
+import Home from "./pages/Home";
 
 // class App extends Component {
 //   render() {
@@ -36,10 +39,10 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          {/* <Route exact path="/" component={Home} /> */}
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/community" component={Community} />
+          <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/about" component={About} />
         </Wrapper>

@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(require("./routes/upload") );
 app.use( "/api", require("./routes/authentication") );
 
 app.get("*", (req, res) => {

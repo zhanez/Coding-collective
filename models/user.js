@@ -20,6 +20,22 @@ const UserSchema = new Schema ({
         type: String,
         required: true
     },
+    githubURL: {
+        type: String,
+        required: false
+    },
+    linkedinURL: {
+        type: String,
+        required: false
+    },
+    facebookURL: {
+        type: String,
+        required: false
+    },
+    instagramURL: {
+        type: String,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now
