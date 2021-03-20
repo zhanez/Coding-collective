@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import cclogo from "../Image/cclogo_long.gif";
+import { useIsAuthenticated } from "../../utils/auth.js";
 
 function Navbar() {
+  const isAuthenticated = useIsAuthenticated();
+
   return (
     <nav className="navbar is-black" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -42,9 +45,15 @@ function Navbar() {
               <Link className="button is-primary" to="/signup">
                 <strong>Sign up</strong>
               </Link>
-              <Link className="button is-light" to="/login">
+              
+              {!isAuthenticated && <Link className="button is-light" to="/login">
                 Log in
-              </Link>
+              </Link>}
+
+              {isAuthenticated && <Link className="button is-light" to="/login">
+                Log out
+              </Link>}
+
             </div>
           </div>
         </div>
