@@ -22,16 +22,18 @@ function Profile() {
   };
 
   return (
-    <div className="tile is-ancestor">
-      <div className="tile is-4 is-vertical is-parent">
-        <div className="tile is-child box">
-          <p className="title">{user.firstName} {user.lastName}</p>
+    <div className="container">
+      <div className="tile is-ancestor">
+        <div className="tile is-4 is-vertical is-parent">
+          <div className="tile is-child box">
+            <p className="title">{user.firstName} {user.lastName}</p>
           <form action="/profile" method="post" enctype="multipart/form-data">
             <input type="file" name="avatar" />
             <input type="submit"/>
           </form>
           <img src="/uploadImages/72046124.png" alt="user-profile-img"/>  
         </div>
+        
         <div className="tile is-child box">
           <p className="title">Contact</p>
           <div class="columns">
@@ -50,6 +52,7 @@ function Profile() {
           </div>
         </div>
       </div>
+
       <div className="tile is-parent">
         <div className="tile is-child box">
           <p className="title">About Me</p>
@@ -60,6 +63,7 @@ function Profile() {
       </div>
     </div>
 
+    </div>
   )
 }
 export default Profile;
