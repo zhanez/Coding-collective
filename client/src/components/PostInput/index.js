@@ -4,6 +4,7 @@ import React from "react";
 function PostInput() {
   return (
     <div className="column is-three-quarters">
+      <h1 className="glow">Community Newsfeed</h1>
       <h2>Start your Post Here!</h2>
 
       {/* <div className="field is-horizontal">
