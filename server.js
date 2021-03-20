@@ -5,6 +5,7 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
+const routes = require("./routes");
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3001;
@@ -23,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(require("./routes/upload") );
-app.use( "/api", require("./routes/authentication") );
+app.use(routes);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

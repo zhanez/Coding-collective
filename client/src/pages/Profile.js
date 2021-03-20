@@ -1,16 +1,33 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
 
 function Profile() {
-  const [linkedin, setLinkedin] = useState();
-  const [github, setGithub] = useState();
-  const [facebook, setFacebook] = useState();
-  const [instagram, setInstagram] = useState();
+  const [user, setUser] = useState([]);
+  // const [formObject, setFormObject] = useState({})
+
+  useEffect(() => {
+    loadUser()
+  }, [])
+
+  function loadUser() {
+    API.loadUsers()
+      .then(res => {
+        console.log(res.data)
+        setUser(res.data)
+      }
+        
+      )
+      .catch(err => console.log(err));
+  };
+
+
+
   return (
     <div className="tile is-ancestor">
       <div className="tile is-4 is-vertical is-parent">
         <div className="tile is-child box">
-          <p className="title">Profile</p>
+          <p className="title">{user.firstName} {user.lastName}</p>
           <form action="/profile" method="post" enctype="multipart/form-data">
             <input type="file" name="avatar" />
             <input type="submit"/>
@@ -21,8 +38,8 @@ function Profile() {
         <div className="tile is-child box">
           <p className="title">Contact</p>
           <div class="columns">
-            <div class="column">
-              <a href={linkedin}><i className="fab fa-linkedin-in iconSize"></i></a>
+            {/* <div class="column"> */}
+              {/* <a href={linkedin}><i className="fab fa-linkedin-in iconSize"></i></a>
             </div>
             <div class="column">
               <a href={github}><i className="fab fa-github iconSize"></i></a>
@@ -32,7 +49,7 @@ function Profile() {
             </div>
             <div class="column">
               <a href={facebook}><i className="fab fa-facebook-f iconSize"></i></a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
