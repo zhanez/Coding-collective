@@ -3,6 +3,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import PostInput from "../components/PostInput";
 import {Container, Columns} from "../components/Grid";
+import Post from "../components/Post";
 
 function Community() {
   return (
@@ -13,6 +14,7 @@ function Community() {
       </div>
       <div className="column is-three-quarters">
         <PostInput />
+        <Post />
       </div>
       </Columns>
     </Container>
