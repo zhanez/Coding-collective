@@ -42,15 +42,15 @@ function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <Link className="button is-primary" to="/signup">
+              {!isAuthenticated && <Link className="button is-primary" to="/signup">
                 <strong>Sign up</strong>
-              </Link>
+              </Link>}
               
               {!isAuthenticated && <Link className="button is-light" to="/login">
                 Log in
               </Link>}
 
-              {isAuthenticated && <Link className="button is-light" to="/login">
+              {isAuthenticated && <Link className="button is-light" to="/">
                 Log out
               </Link>}
 
