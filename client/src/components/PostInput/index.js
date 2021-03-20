@@ -6,7 +6,7 @@ function PostInput() {
     <div className="column is-three-quarters">
       <h2>Start your Post Here!</h2>
 
-      <div className="field is-horizontal">
+      {/* <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label">Category</label>
         </div>
@@ -23,9 +23,9 @@ function PostInput() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="field is-horizontal">
+      {/* <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label">Subject</label>
         </div>
@@ -36,16 +36,16 @@ function PostInput() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label">Content</label>
+          <label className="label">User Name</label>
         </div>
           <div className="field-body">
             <div className="field">
             <div className="control">
-                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+                <textarea className="textarea" placeholder=""></textarea>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ function PostInput() {
           <div className="field">
             <div className="control">
               <button className="button is-primary">
-                Submit
+                Share
               </button>
             </div>
           </div>
