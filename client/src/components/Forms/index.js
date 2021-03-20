@@ -31,12 +31,28 @@ export function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} class="box column is-three-fifths is-offset-one-fifth ">
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control">
+    <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth ">
+      <div className="field-group">
+ <div className="field is-inline-block-desktop">
+  <label className="label">First Name</label>
+  <div className="control">
+   <input className="input" type="text" placeholder="e.g Alex"/>
+  </div>
+ </div>
+
+<div className="field is-inline-block-desktop">
+ <label className="label">Last Name</label>
+ <div className="control">
+  <input className="input" type="text" placeholder="e.g Smith" />
+ </div>
+ </div>
+</div>
+      
+      <div className="field">
+        <label className="label">Email</label>
+        <div className="control">
           <input
-            class="input"
+            className="input"
             type="text"
             placeholder="e.g. alex@example.com"
             ref={emailRef}
@@ -44,16 +60,44 @@ export function SignupForm() {
         </div>
       </div>
 
-      <div class="field">
-        <label class="label">Password</label>
-        <div class="control">
-          <input class="input" type="password" ref={passwordRef} placeholder="********" />
+      <div className="field">
+        <label className="label">Password</label>
+        <div className="control">
+          <input className="input" type="password" ref={passwordRef} placeholder="********" />
         </div>
       </div>
 
-      <div class="buttons is-center">
-        <button id="button" class="button is-primary is-hovered">Sign Up</button>
-        <button id="button" class="button is-primary is-hovered" to="/">Go Back</button>
+      <div className="field">
+        <label className="label">Github URL</label>
+        <div className="control">
+          <input className="input" type="URL" ref={passwordRef} placeholder="Github" />
+        </div>
+      </div>
+
+      <div className="field">
+        <label className="label">Linkedin URL</label>
+        <div className="control">
+          <input className="input" type="URL" ref={passwordRef} placeholder="Linkedin" />
+        </div>
+      </div>
+
+      <div className="field">
+        <label className="label">Facebook URL</label>
+        <div className="control">
+          <input className="input" type="URL" ref={passwordRef} placeholder="Facebook" />
+        </div>
+      </div>
+
+      <div className="field">
+        <label className="label">Instagram URL</label>
+        <div className="control">
+          <input className="input" type="URL" ref={passwordRef} placeholder="Instagram" />
+        </div>
+      </div>
+
+      <div className="buttons is-center">
+        <button id="button" className="button is-primary is-hovered">Sign Up</button>
+        <button id="button" className="button is-primary is-hovered" to="/">Go Back</button>
       </div>
     </form>
   );
@@ -62,29 +106,29 @@ export function SignupForm() {
 export function LoginForm() {
   return (
     <div className="columns">
-      <form class="box column is-three-fifths is-offset-one-fifth mt-5">
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control">
+      <form className="box column is-three-fifths is-offset-one-fifth mt-5">
+        <div className="field">
+          <label className="label">Email</label>
+          <div className="control">
             <input
-              class="input"
+              className="input"
               type="email"
               placeholder="e.g. alex@example.com"
             />
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">Password</label>
-          <div class="control">
-            <input class="input" type="password" placeholder="********" />
+        <div className="field">
+          <label className="label">Password</label>
+          <div className="control">
+            <input className="input" type="password" placeholder="********" />
           </div>
         </div>
-        <div class="buttons is-center">
-          <button id="button" class="button is-primary is-hovered ">
+        <div className="buttons is-center">
+          <button id="button" className="button is-primary is-hovered ">
             Login
           </button>
-          <button id="button" class="button is-primary is-hovered">
+          <button id="button" className="button is-primary is-hovered">
             Go Back
           </button>
         </div>
