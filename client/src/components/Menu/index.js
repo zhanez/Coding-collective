@@ -1,11 +1,11 @@
 function Menu() {
     return(
-        <aside class="menu">
-        <ul class="menu-list">
+        <aside className="menu">
+        <ul className="menu-list">
             <li><a>Newsfeed</a></li>
             <li><a>My Profile</a></li>
             <li>
-            <a class="is-active">Classmates</a>
+            <a className="is-active">Classmates</a>
             <ul>
                 <li><a>Zhane Zabala</a></li>
                 <li><a>Ellie Fu</a></li>
