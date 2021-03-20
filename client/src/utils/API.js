@@ -1,4 +1,3 @@
-// import API
 import axios from "axios";
 
 
