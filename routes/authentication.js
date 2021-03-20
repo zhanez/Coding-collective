@@ -96,7 +96,7 @@ router.post("/register", validateBodyWith( registerValidator ), async (req, res)
 
   try {
 
-    const { email, password } = req.body;
+    const { firstName, lastName, email, password, githubURL, linkedinURL, facebookURL, instagramURL} = req.body;
 
     const user = await User.findOne({ email });
 
@@ -106,8 +106,14 @@ router.post("/register", validateBodyWith( registerValidator ), async (req, res)
     }
 
     const newUser = new User({
+      firstName,
+      lastName,
       email,
-      password: await passwordHash( password )
+      password: await passwordHash( password ),
+      githubURL,
+      linkedinURL,
+      facebookURL,
+      instagramURL
     });
 
     await newUser.save();
