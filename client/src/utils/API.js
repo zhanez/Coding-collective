@@ -2,64 +2,50 @@ import axios from "axios";
 
 
 class API {
+  axios;
 
-    axios;
+  constructor() {
+    this.axios = axios.create();
+  }
 
-    constructor() {
+  /**
+   * @param {String} name
+   * @param {String} value
+   */
+  setHeader(name, value) {
+    if (value) this.axios.defaults.headers.common[name] = value;
+    else delete this.axios.defaults.headers.common[name];
+  }
 
-        this.axios = axios.create();
+  /**
+   * @param {object} userData
+   * @param {String} userData.email
+   * @param {String} userData.password
+   *
+   * @returns {Promise}
+   */
+  register(userData) {
+    return this.axios.post("/auth/register", userData);
+  }
 
-    }
+  /**
+   * @param {object} userData
+   * @param {String} userData.email
+   * @param {String} userData.password
+   *
+   * @returns {Promise}
+   */
+  login(userData) {
+    return this.axios.post("/auth/login", userData);
+  }
 
-    /**
-     * @param {String} name 
-     * @param {String} value 
-     */
-    setHeader( name, value ) {
+  authenticated() {
+    return this.axios.post("/auth/authenticated");
+  }
 
-        if( value )
-
-            this.axios.defaults.headers.common[name] = value;
-
-        else
-
-            delete this.axios.defaults.headers.common[name];
-
-    }
-
-    /**
-     * @param {object} userData 
-     * @param {String} userData.email
-     * @param {String} userData.password
-     * 
-     * @returns {Promise}
-     */
-    register( userData ) {
-
-        return this.axios.post("/api/register", userData);
-
-    }
-
-
-    /**
-     * @param {object} userData 
-     * @param {String} userData.email
-     * @param {String} userData.password
-     * 
-     * @returns {Promise}
-     */
-    login( userData ) {
-
-        return this.axios.post("/api/login", userData);
-
-    }
-
-    authenticated() {
-
-        return this.axios.post("/api/authenticated");
-
-    }
-
+  loadUsers() {
+      return this.axios.get("/api/user");
+  }
 }
 
 export default new API();
