@@ -48,22 +48,14 @@ export function SignupForm() {
  <div className="field is-inline-block-desktop">
   <label className="label">First Name</label>
   <div className="control">
-<<<<<<< HEAD
-   <input className="input" type="text" placeholder="e.g Alex"/>
-=======
    <input className="input" ref={firstnameRef} type="text" placeholder="e.g Alex"/>
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
   </div>
  </div>
 
 <div className="field is-inline-block-desktop">
  <label className="label">Last Name</label>
  <div className="control">
-<<<<<<< HEAD
-  <input className="input" type="text" placeholder="e.g Smith" />
-=======
   <input className="input" ref={lastnameRef} type="text" placeholder="e.g Smith" />
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
  </div>
  </div>
 </div>
@@ -90,44 +82,28 @@ export function SignupForm() {
       <div className="field">
         <label className="label">Github URL</label>
         <div className="control">
-<<<<<<< HEAD
-          <input className="input" type="URL" ref={passwordRef} placeholder="Github" />
-=======
           <input className="input" type="URL" ref={githubURLRef} placeholder="Github" />
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
         </div>
       </div>
 
       <div className="field">
         <label className="label">Linkedin URL</label>
         <div className="control">
-<<<<<<< HEAD
-          <input className="input" type="URL" ref={passwordRef} placeholder="Linkedin" />
-=======
           <input className="input" type="URL" ref={linkedinURLRef} placeholder="Linkedin" />
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
         </div>
       </div>
 
       <div className="field">
         <label className="label">Facebook URL</label>
         <div className="control">
-<<<<<<< HEAD
-          <input className="input" type="URL" ref={passwordRef} placeholder="Facebook" />
-=======
           <input className="input" type="URL" ref={facebookURLRef} placeholder="Facebook" />
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
         </div>
       </div>
 
       <div className="field">
         <label className="label">Instagram URL</label>
         <div className="control">
-<<<<<<< HEAD
-          <input className="input" type="URL" ref={passwordRef} placeholder="Instagram" />
-=======
           <input className="input" type="URL" ref={instagramURLRef} placeholder="Instagram" />
->>>>>>> c3e6e0b925017011938960c87b587019d4d01c0a
         </div>
       </div>
 
