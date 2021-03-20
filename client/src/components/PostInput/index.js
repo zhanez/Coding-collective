@@ -6,14 +6,14 @@ function PostInput() {
     <div className="column is-three-quarters">
       <h2>Start your Post Here!</h2>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Category</label>
+      <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label">Category</label>
         </div>
-        <div class="field-body">
-          <div class="field is-narrow">
-            <div class="control">
-              <div class="select is-fullwidth">
+        <div className="field-body">
+          <div className="field is-narrow">
+            <div className="control">
+              <div className="select is-fullwidth">
                 <select>
                   <option>Business development</option>
                   <option>Marketing</option>
@@ -25,40 +25,40 @@ function PostInput() {
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Subject</label>
+      <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label">Subject</label>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <input class="input" type="text" placeholder="e.g. Partnership opportunity" />
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <input className="input" type="text" placeholder="e.g. Partnership opportunity" />
             </div>
           </div>
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Content</label>
+      <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label">Content</label>
         </div>
-          <div class="field-body">
-            <div class="field">
-            <div class="control">
-                <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+          <div className="field-body">
+            <div className="field">
+            <div className="control">
+                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label">
+      <div className="field is-horizontal">
+        <div className="field-label">
             {/* <!-- Left empty for spacing --> */}
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <button class="button is-primary">
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <button className="button is-primary">
                 Submit
               </button>
             </div>
