@@ -4,24 +4,24 @@ import React from "react";
 function Sidebar() {
   return (
     <div className="column is-one-quarter">
-    <aside class="menu">
-      <p class="menu-label">
+    <aside className="menu">
+      <p className="menu-label">
         General
       </p>
 
-      <ul class="menu-list">
+      <ul className="menu-list">
         <li><a>Dashboard</a></li>
         <li><a>Customers</a></li>
       </ul>
 
-      <p class="menu-label">
+      <p className="menu-label">
         Administration
       </p>
 
-      <ul class="menu-list">
+      <ul className="menu-list">
         <li><a>Team Settings</a></li>
         <li>
-          <a class="is-active">Manage Your Team</a>
+          <a className="is-active">Manage Your Team</a>
           <ul>
             <li><a>Members</a></li>
             <li><a>Plugins</a></li>
@@ -33,11 +33,11 @@ function Sidebar() {
         <li><a>Authentication</a></li>
       </ul>
 
-      <p class="menu-label">
+      <p className="menu-label">
         Transactions
       </p>
 
-      <ul class="menu-list">
+      <ul className="menu-list">
         <li><a>Payments</a></li>
         <li><a>Transfers</a></li>
         <li><a>Balance</a></li>
