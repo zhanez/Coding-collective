@@ -5,9 +5,8 @@ function Sidebar() {
   return (
       <aside className="menu">
         <ul className="menu-list">
-          <li><a>My Profile</a></li>
           <li>
-            <a className="is-active">My Classmates</a>
+            <a>My Classmates</a>
             <ul>
                 <li><a>Zhane Zabala</a></li>
                 <li><a>Ellie Fu</a></li>
@@ -16,7 +15,6 @@ function Sidebar() {
                 <li><a>Chetan Sekhon</a></li>
             </ul>
           </li>
-          <li><a>Invite Classmate</a></li>
         </ul>
       </aside>
   );
