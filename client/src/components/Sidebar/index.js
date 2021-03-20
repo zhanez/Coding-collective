@@ -4,42 +4,19 @@ import React from "react";
 function Sidebar() {
   return (
       <aside className="menu">
-        <p className="menu-label">
-          General
-        </p>
-
         <ul className="menu-list">
-          <li><a>Dashboard</a></li>
-          <li><a>Customers</a></li>
-        </ul>
-
-        <p className="menu-label">
-          Administration
-        </p>
-
-        <ul className="menu-list">
-          <li><a>Team Settings</a></li>
+          <li><a>My Profile</a></li>
           <li>
-            <a className="is-active">Manage Your Team</a>
+            <a className="is-active">My Classmates</a>
             <ul>
-              <li><a>Members</a></li>
-              <li><a>Plugins</a></li>
-              <li><a>Add a member</a></li>
+                <li><a>Zhane Zabala</a></li>
+                <li><a>Ellie Fu</a></li>
+                <li><a>Marco Oseguera</a></li>
+                <li><a>Yuwen Yu</a></li>
+                <li><a>Chetan Sekhon</a></li>
             </ul>
           </li>
-          <li><a>Invitations</a></li>
-          <li><a>Cloud Storage Environment Settings</a></li>
-          <li><a>Authentication</a></li>
-        </ul>
-
-        <p className="menu-label">
-          Transactions
-        </p>
-
-        <ul className="menu-list">
-          <li><a>Payments</a></li>
-          <li><a>Transfers</a></li>
-          <li><a>Balance</a></li>
+          <li><a>Invite Classmate</a></li>
         </ul>
       </aside>
   );
