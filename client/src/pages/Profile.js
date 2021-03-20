@@ -21,8 +21,6 @@ function Profile() {
       .catch(err => console.log(err));
   };
 
-
-
   return (
     <div className="tile is-ancestor">
       <div className="tile is-4 is-vertical is-parent">
@@ -32,24 +30,23 @@ function Profile() {
             <input type="file" name="avatar" />
             <input type="submit"/>
           </form>
-          {/* <img src="/uploadImages/72046124.png"/>   */}
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+          <img src="/uploadImages/72046124.png" alt="user-profile-img"/>  
         </div>
         <div className="tile is-child box">
           <p className="title">Contact</p>
           <div class="columns">
-            {/* <div class="column"> */}
-              {/* <a href={linkedin}><i className="fab fa-linkedin-in iconSize"></i></a>
+            <div class="column">
+              <a href={user.linkedinURL}><i className="fab fa-linkedin-in iconSize"></i></a>
             </div>
             <div class="column">
-              <a href={github}><i className="fab fa-github iconSize"></i></a>
+              <a href={user.githubURL}><i className="fab fa-github iconSize"></i></a>
             </div>
             <div class="column">
-              <a href={instagram}><i className="fab fa-instagram iconSize"></i></a>
+              <a href={user.instagramURL}><i className="fab fa-instagram iconSize"></i></a>
             </div>
             <div class="column">
-              <a href={facebook}><i className="fab fa-facebook-f iconSize"></i></a>
-            </div> */}
+              <a href={user.facebookURL}><i className="fab fa-facebook-f iconSize"></i></a>
+            </div>
           </div>
         </div>
       </div>
