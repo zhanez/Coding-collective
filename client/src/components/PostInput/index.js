@@ -3,12 +3,10 @@ import React from "react";
 
 function PostInput() {
   return (
-    <div className="column is-three-quarters">
-      <h2>Start your Post Here!</h2>
-
+    <div>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label">Category</label>
+          <label className="label has-text-white">Category</label>
         </div>
         <div className="field-body">
           <div className="field is-narrow">
@@ -27,7 +25,7 @@ function PostInput() {
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label">Subject</label>
+          <label className="label has-text-white">Subject</label>
         </div>
         <div className="field-body">
           <div className="field">
@@ -40,7 +38,7 @@ function PostInput() {
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label class="label">Content</label>
+          <label class="label has-text-white">Content</label>
         </div>
           <div className="field-body">
             <div className="field">

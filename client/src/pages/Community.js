@@ -5,26 +5,18 @@ import PostInput from "../components/PostInput";
 import {Container, Columns} from "../components/Grid";
 
 function Community() {
-    return (
-      <Container>
-        <Columns>
-          <Sidebar />
-          <PostInput />
-        {/* <div className="field-body column">
-          <div class="field is-grouped">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Find a repository" />
-            </p>
-            <p class="control">
-              <button class="button is-info">
-                Search
-              </button>
-            </p>
-          </div>
-        </div> */}
+  return (
+    <Container>
+      <Columns>
+      <div className="column is-one-quarter has-background-white">
+        <Sidebar />
+      </div>
+      <div className="column is-three-quarters">
+        <PostInput />
+      </div>
       </Columns>
-      </Container>
-    );
+    </Container>
+  );
 }
 
 export default Community;

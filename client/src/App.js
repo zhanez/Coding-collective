@@ -43,7 +43,7 @@ function App() {
           <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
-          <Route exact path="/profile" component={Profile} />
+          <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
           <Route exact path="/about" component={About} />
         </Wrapper>
       </div>
