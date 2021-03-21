@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import "./style.css";
 
 function PostInput() {
   return (
-    <div>
+    <div className="postInput">
+      <h2 className="title is-3 has-text-white">Start your post here!</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label has-text-white">Category</label>
@@ -56,7 +58,7 @@ function PostInput() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <button className="button is-primary">
+              <button className="button is-success">
                 Submit
               </button>
             </div>

@@ -13,10 +13,10 @@ function Community() {
         <Sidebar />
       </div>
       <div className="column is-three-quarters">
-        <PostInput />
         <Post />
       </div>
       </Columns>
+      <PostInput />
     </Container>
   );
 }
