@@ -50,7 +50,7 @@ function Navbar() {
                 Log in
               </Link>}
 
-              {isAuthenticated && <Link className="button is-light" to="/">
+              {isAuthenticated && <Link className="button is-danger" to="/">
                 Log out
               </Link>}
 
