@@ -39,6 +39,7 @@ function Community() {
       feedAPI.savePost({
         title: formObject.title,
         content: formObject.content,
+        category: formObject.category
       })
         .then(res => loadPosts())
         .catch(err => console.log(err));
@@ -60,6 +61,7 @@ function Community() {
       <PostInput 
         handleTitle={handleInputChange}
         handleContent={handleInputChange}
+        handleCategory={handleInputChange}
         handleFormSubmit={handleFormSubmit}
       />
     </Container>
