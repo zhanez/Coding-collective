@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import "./style.css";
 
-function PostInput() {
+function PostInput(props) {
   return (
-    <div>
+    <form className="postInput">
+      <h2 className="title is-3 has-text-white">Start your post here!</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label has-text-white">Category</label>
@@ -12,10 +14,11 @@ function PostInput() {
           <div className="field is-narrow">
             <div className="control">
               <div className="select is-fullwidth">
-                <select>
-                  <option>Business development</option>
-                  <option>Marketing</option>
-                  <option>Sales</option>
+                <select name="category" onChange={props.handleCategory} {...props}>
+                  <option>Coder Connection</option>
+                  <option>Coding Issues</option>
+                  <option>Works Sharing</option>
+                  <option>Other</option>
                 </select>
               </div>
             </div>
@@ -30,7 +33,14 @@ function PostInput() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <input className="input" type="text" placeholder="e.g. Partnership opportunity" />
+              <input 
+                className="input" 
+                type="text" 
+                name="title"
+                placeholder="e.g. Share my projects"
+                onChange={props.handleTitle} 
+                {...props} 
+              />
             </div>
           </div>
         </div>
@@ -43,7 +53,13 @@ function PostInput() {
           <div className="field-body">
             <div className="field">
             <div className="control">
-                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+                <textarea 
+                  className="textarea" 
+                  placeholder="Start Something Here" 
+                  name="content"
+                  onChange={props.handleContent}
+                  {...props}
+                />
             </div>
           </div>
         </div>
@@ -56,14 +72,14 @@ function PostInput() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <button className="button is-primary">
+              <button className="button is-success" onClick={props.handleFormSubmit} {...props}>
                 Submit
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
 

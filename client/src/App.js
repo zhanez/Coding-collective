@@ -13,6 +13,7 @@ import { useAuthTokenStore } from "./utils/auth";
 import GuestRoute from "./components/auth/GuestRoute";
 import PrivateRoute from "./components/auth/PrivateRoute"
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 // class App extends Component {
 //   render() {
@@ -46,6 +47,7 @@ function App() {
           <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
           <Route exact path="/about" component={About} />
         </Wrapper>
+        <Footer />
       </div>
     </BrowserRouter>
   );
