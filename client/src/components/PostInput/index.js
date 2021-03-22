@@ -2,7 +2,7 @@
 import React from "react";
 import "./style.css";
 
-function PostInput() {
+function PostInput(props) {
   return (
     <div className="postInput">
       <h2 className="title is-3 has-text-white">Start your post here!</h2>
@@ -32,7 +32,14 @@ function PostInput() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <input className="input" type="text" placeholder="e.g. Partnership opportunity" />
+              <input 
+                className="input" 
+                type="text" 
+                name="title"
+                placeholder="e.g. Partnership opportunity"
+                onChange={props.handleTitle} 
+                {...props} 
+              />
             </div>
           </div>
         </div>
@@ -45,7 +52,13 @@ function PostInput() {
           <div className="field-body">
             <div className="field">
             <div className="control">
-                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+                <textarea 
+                  className="textarea" 
+                  placeholder="Explain how we can help you" 
+                  name="content"
+                  onChange={props.handleContent}
+                  {...props}
+                />
             </div>
           </div>
         </div>
@@ -58,7 +71,7 @@ function PostInput() {
         <div className="field-body">
           <div className="field">
             <div className="control">
-              <button className="button is-success">
+              <button className="button is-success" onClick={props.handleFormSubmit} {...props}>
                 Submit
               </button>
             </div>
