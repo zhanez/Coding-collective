@@ -36,17 +36,17 @@ function Profile() {
         
         <div className="tile is-child box">
           <p className="title">Contact</p>
-          <div class="columns">
-            <div class="column">
+          <div className="columns">
+            <div className="column">
               <a href={user.linkedinURL}><i className="fab fa-linkedin-in iconSize"></i></a>
             </div>
-            <div class="column">
+            <div className="column">
               <a href={user.githubURL}><i className="fab fa-github iconSize"></i></a>
             </div>
-            <div class="column">
+            <div className="column">
               <a href={user.instagramURL}><i className="fab fa-instagram iconSize"></i></a>
             </div>
-            <div class="column">
+            <div className="column">
               <a href={user.facebookURL}><i className="fab fa-facebook-f iconSize"></i></a>
             </div>
           </div>
