@@ -53,7 +53,7 @@ function Community() {
 
     <Container>
       <Columns>
-      <div className="column is-one-quarter has-background-white">
+      <div className="column is-one-quarter has-background-white" id="memberscol">
         <Sidebar />
       </div>
       <div className="column is-three-quarters" id="post">
