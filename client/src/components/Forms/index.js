@@ -108,7 +108,7 @@ export function SignupForm() {
       </div>
 
       <div className="buttons is-center">
-        <button id="button" className="button is-primary is-hovered">Sign Up</button>
+        <button id="button" className="button is-primary is-hovered" to="/community">Sign Up</button>
         <button id="button" className="button is-primary is-hovered" to="/">Go Back</button>
       </div>
     </form>
@@ -161,7 +161,7 @@ export function LoginForm() {
           </div>
         </div>
         <div className="buttons is-center">
-          <button id="button" className="button is-primary is-hovered">
+          <button id="button" className="button is-primary is-hovered" to="/community">
             Login
           </button>
           <button id="button" className="button is-primary is-hovered">
