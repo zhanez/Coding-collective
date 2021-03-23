@@ -116,9 +116,32 @@ export function SignupForm() {
 }
 
 export function LoginForm() {
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  const login = useLogin();
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    try {
+
+      await login({ email, password });
+      
+    } catch(err) {
+      
+      if(err.response && err.response.data) console.log(err.response.data);
+
+    }
+  }
+
   return (
     <div className="columns">
-      <form className="box column is-three-fifths is-offset-one-fifth mt-5">
+      <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth mt-5">
         <div className="field">
           <label className="label">Email</label>
           <div className="control">
@@ -126,6 +149,7 @@ export function LoginForm() {
               className="input"
               type="email"
               placeholder="e.g. alex@example.com"
+              ref={emailRef}
             />
           </div>
         </div>
@@ -133,11 +157,11 @@ export function LoginForm() {
         <div className="field">
           <label className="label">Password</label>
           <div className="control">
-            <input className="input" type="password" placeholder="********" />
+            <input className="input" type="password" ref={passwordRef} placeholder="********" />
           </div>
         </div>
         <div className="buttons is-center">
-          <button id="button" className="button is-primary is-hovered ">
+          <button id="button" className="button is-primary is-hovered">
             Login
           </button>
           <button id="button" className="button is-primary is-hovered">
