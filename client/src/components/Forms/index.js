@@ -45,14 +45,14 @@ export function SignupForm() {
   return (
     <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth ">
       <div className="field-group">
- <div className="field is-inline-block-desktop">
+ <div className="field is-inline-block-desktop column is-half">
   <label className="label">First Name</label>
   <div className="control">
    <input className="input" ref={firstnameRef} type="text" placeholder="e.g Alex"/>
   </div>
  </div>
 
-<div className="field is-inline-block-desktop">
+<div className="field is-inline-block-desktop column is-half ">
  <label className="label">Last Name</label>
  <div className="control">
   <input className="input" ref={lastnameRef} type="text" placeholder="e.g Smith" />
@@ -60,7 +60,7 @@ export function SignupForm() {
  </div>
 </div>
       
-      <div className="field">
+      <div className="field is-inline-block-desktop column is-half">
         <label className="label">Email</label>
         <div className="control">
           <input
@@ -72,7 +72,7 @@ export function SignupForm() {
         </div>
       </div>
 
-      <div className="field">
+      <div className="field is-inline-block-desktop column is-half">
         <label className="label">Password</label>
         <div className="control">
           <input className="input" type="password" ref={passwordRef} placeholder="********" />
