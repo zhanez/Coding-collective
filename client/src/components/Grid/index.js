@@ -2,7 +2,9 @@ import React from "react";
 
 export function Container(props) {
   return(
-    <div className="container is-widescreen mt-5" style={{ width: 2000 }}>{props.children}</div>
+    <div className="container is-widescreen mt-5" style={{ width: 2000 }}>{props.children}
+
+    </div>
   );
 }
 

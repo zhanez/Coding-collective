@@ -5,7 +5,7 @@ import "./style.css";
 function PostInput(props) {
   return (
     <form className="postInput">
-      <h2 className="title is-3 has-text-white">Start your post here!</h2>
+      <h2 className="title has-text-white">Start your post here:</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label has-text-white">Category</label>

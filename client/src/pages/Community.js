@@ -47,24 +47,30 @@ function Community() {
   };
 
   return (
+
+<div>
+    <h1 className="glow">CODING COLLECTIVE</h1>
+
     <Container>
       <Columns>
       <div className="column is-one-quarter has-background-white">
         <Sidebar />
       </div>
-      <div className="column is-three-quarters">
-        <Post 
-          posts={posts}
-        />
-      </div>
-      </Columns>
-      <PostInput 
+      <div className="column is-three-quarters" id="post">
+        <PostInput 
         handleTitle={handleInputChange}
         handleContent={handleInputChange}
         handleCategory={handleInputChange}
         handleFormSubmit={handleFormSubmit}
       />
+      <Post 
+          posts={posts}
+        />
+      </div>
+      </Columns>
     </Container>
+  </div>
+    
   );
 }
 
