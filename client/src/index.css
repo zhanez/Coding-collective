@@ -60,3 +60,11 @@ align-items: center;
   padding-bottom: 20px;
 }
 
+.column{
+  opacity: 90%;
+}
+
+#memberscol{
+  border-style: solid;
+  border-color: #00fff2;
+}
