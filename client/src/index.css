@@ -34,7 +34,7 @@ box-shadow: orange;
 
 .glow {
 font-size: 70px;
-color: black;
+color: rgb(26, 34, 94);
 text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
 -webkit-animation: glow 4s ease-in-out infinite alternate;
 -moz-animation: glow 4s ease-in-out infinite alternate;
@@ -60,12 +60,13 @@ align-items: center;
   padding-bottom: 20px;
 }
 
-.column{
+/* .column{
   opacity: 90%;
-}
+} */
 
 #memberscol{
   border-style: solid;
   border-color: #00fff2;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 80%;
 }
