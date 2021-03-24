@@ -71,11 +71,10 @@ align-items: center;
   opacity: 80%;
 }
 
-h2{
+.home{
   font-size: larger;
   text-align: center;
   font-family:sans-serif;
   font-style: bold;
-  background-color: white;
-
+  color: rgb(255, 219, 140);
 }

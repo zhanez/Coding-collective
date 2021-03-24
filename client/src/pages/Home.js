@@ -5,7 +5,7 @@ function Home() {
         <div>
         <h1 className="glow"> WELCOME TO CODING COLLECTIVE</h1>
         
-        <h2> Where graduated UW bootcamp colleagues can connect</h2>
+        <h2 className="home"> Where graduated UW bootcamp colleagues can connect</h2>
         </div>
     );
 }
