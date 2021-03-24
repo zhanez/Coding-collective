@@ -29,9 +29,11 @@ function Profile() {
             <p className="title">{user.firstName} {user.lastName}</p>
           <form action="/profile" method="post" enctype="multipart/form-data">
             <input type="file" name="avatar" />
+             <input type="hidden" name="userId" value ={user._id}/>
             <input type="submit"/>
           </form>
-          <img src="/uploadImages/72046124.png" alt="user-profile-img"/>  
+          {console.log(`"/uploadImages/${user.profilePic}"`)}
+          <img src={user.profilePic? `/uploadImages/${user.profilePic}` :"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png"} alt="user-profile-img"/>  
         </div>
         
         <div className="tile is-child box">

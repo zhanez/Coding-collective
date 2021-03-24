@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     <aside className="menu">
       <p class="menu-label">
-        My Classmates
+        My Colleagues:
       </p>
       <ul class="menu-list">
         <li><a>Zhane Zabala</a></li>
@@ -17,12 +17,11 @@ function Sidebar() {
       </ul>
 
       <p class="menu-label">
-        Find Posts by Category
+        Find Posts by Category:
       </p>
       <ul class="menu-list">
-        <li><a>Coder Connection</a></li>
         <li><a>Coding Issues</a></li>
-        <li><a>Works Sharing</a></li>
+        <li><a>Share Content</a></li>
         <li><a>Other</a></li>
       </ul>
     </aside>

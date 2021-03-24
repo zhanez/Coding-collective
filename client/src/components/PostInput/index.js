@@ -5,19 +5,18 @@ import "./style.css";
 function PostInput(props) {
   return (
     <form className="postInput">
-      <h2 className="title has-text-white">Start your post here:</h2>
+      <h2 className="title ">Start your post here:</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label has-text-white">Category</label>
+          <label className="label">Category</label>
         </div>
         <div className="field-body">
           <div className="field is-narrow">
             <div className="control">
               <div className="select is-fullwidth">
                 <select name="category" onChange={props.handleCategory} {...props}>
-                  <option>Coder Connection</option>
+                  <option>Share Content</option>
                   <option>Coding Issues</option>
-                  <option>Works Sharing</option>
                   <option>Other</option>
                 </select>
               </div>
@@ -28,7 +27,7 @@ function PostInput(props) {
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label has-text-white">Subject</label>
+          <label className="label ">Subject</label>
         </div>
         <div className="field-body">
           <div className="field">
@@ -48,7 +47,7 @@ function PostInput(props) {
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label class="label has-text-white">Content</label>
+          <label class="label">Content    </label>
         </div>
           <div className="field-body">
             <div className="field">

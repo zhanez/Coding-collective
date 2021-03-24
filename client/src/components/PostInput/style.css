@@ -1,8 +1,25 @@
-.postInput {
-    margin-top: 10px;
+/* .postInput {
     
+    
+} */
+.title{
+    color: rgb(255, 219, 140);;
 }
 
 h2{
-    padding-left: 15px;
+    padding-left: 60px;
+    font-family:sans-serif;
+    font-style: bold;
+    
+}
+
+.label{
+    font-family: sans-serif;
+    font-size: large;
+    color: black;
+    background-color: rgb(255, 219, 140);
+    /* opacity: 90%; */
+    margin-left: 50px;
+    margin-right: 30px;
+    background-size: round;
 }

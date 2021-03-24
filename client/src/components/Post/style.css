@@ -1,4 +1,15 @@
 article {
     margin-left: 40px;
+    
+}
+
+.message-header{
+    background-color:#00fff2;
+    font-family: sans-serif;
+    
+}
+
+.message-body{
+    font-family: sans-serif;
 }
 

@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = {
     findUser: function(req,res) {
         const user = req.user
-        console.log(user)
+        console.log("user controller:",user)
         db.User
             .findById(user._id)
             .sort({ date: -1 })

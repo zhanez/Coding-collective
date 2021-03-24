@@ -9,7 +9,7 @@ function Post(props) {
         {posts.map(post => (
           <li key={post._id}>
             <article className=" mt-5 message">
-              <div className="message-header">
+              <div className="message-header" >
                 <p>{post.title}</p>
                 <span class="tag is-warning is-light">{post.category}</span>
               </div>
