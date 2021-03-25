@@ -50,6 +50,10 @@ class API {
   getallUsers() {
     return this.axios.get("/api/user/all");
   }
+
+  getClassmate() {
+    return this.axios.get("/api/user/classmate/:id")
+  }
 }
 
 export default new API();
