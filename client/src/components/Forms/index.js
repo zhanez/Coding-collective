@@ -165,7 +165,7 @@ export function LoginForm() {
           <button id="button" className="button is-primary is-hovered" to="/community">
             Login
           </button>
-          <button id="button" className="button is-primary is-hovered">
+          <button id="button" className="button is-primary is-hovered" to="/">
             Go Back
           </button>
         </div>
