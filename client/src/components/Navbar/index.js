@@ -29,14 +29,12 @@ function Navbar() {
           <Link className="navbar-item" to="/">
             Home
           </Link>
-
           <Link className="navbar-item" to="/community">
             Community
           </Link>
           <Link className="navbar-item" to="/profile">
             Profile
           </Link>
-
           <Link className="navbar-item" to="/about">
             About Us
           </Link>
