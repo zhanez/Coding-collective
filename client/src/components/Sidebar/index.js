@@ -20,7 +20,7 @@ function Sidebar() {
   console.log(users);
 
   return (
-    <aside className="menu">
+    <aside className="menu pl-6 pt-5">
       <p class="menu-label">
         My Colleagues:
       </p>
