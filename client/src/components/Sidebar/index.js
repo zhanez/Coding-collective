@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import API from "../../utils/API";
 
-
 function Sidebar() {
   const [users, setUsers] = useState([]);
     useEffect(() => {
@@ -13,11 +12,13 @@ function Sidebar() {
     function loadUsers() {
         API.getallUsers()
             .then(res => {
-                console.log(res.data)
                 setUsers(res.data)
-            }).catch(err => console.log(err));
+            }).catch(err => {
+              console.log(err)
+            });
     };    
-  console.log(users);
+
+    console.log('user state:', users)
 
   return (
     <aside className="menu">
@@ -25,7 +26,7 @@ function Sidebar() {
         My Colleagues:
       </p>
       <ul class="menu-list">
-        {users.map(user => <li>{user.firstName} {user.lastName}</li>)}
+        {users.map(user => <li><a href="/classmate">{user.firstName} {user.lastName}</a></li>)}
       </ul>
 
       <p class="menu-label">
