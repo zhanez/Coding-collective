@@ -4,7 +4,7 @@ import "./style.css";
 function Post(props) {
   const { posts } = props;
   return (
-    <div>
+    <div className="pr-6">
       <ul>
         {posts.map(post => (
           <li key={post._id}>

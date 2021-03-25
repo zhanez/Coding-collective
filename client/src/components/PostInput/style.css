@@ -13,13 +13,17 @@ h2{
     
 }
 
-.label{
+label{
     font-family: sans-serif;
     font-size: large;
-    color: black;
-    background-color: rgb(255, 219, 140);
-    /* opacity: 90%; */
+    color: white;
+    /* background-color: rgb(255, 219, 140);
+    opacity: 90%;
     margin-left: 50px;
     margin-right: 30px;
-    background-size: round;
+    background-size: round; */
+}
+
+.labelcolor {
+    color: white;
 }

@@ -22,7 +22,7 @@ function Profile() {
   };
 
   return (
-    <div className="mt-5 container">
+    <div className="mt-5 mb-5 container">
       <div className="tile is-ancestor">
         <div className="tile is-4 is-vertical is-parent">
           <div className="tile is-child box">

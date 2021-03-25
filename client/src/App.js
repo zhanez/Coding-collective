@@ -26,7 +26,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Home} />
           <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <GuestRoute exact path="/signup" redirectTo="/community" component={Signup} />
           <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
           <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
           <Route exact path="/about" component={About} />

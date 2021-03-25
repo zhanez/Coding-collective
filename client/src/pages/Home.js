@@ -13,10 +13,6 @@ function Home() {
           <button class="button is-primary is-large">Get Started!</button>
         </Link>
       </Hero>
-
-        {/* <h1 className=""> WELCOME TO CODING COLLECTIVE</h1>
-        
-        <h2 className="home"> Where graduated UW bootcamp colleagues can connect</h2> */}
     </div>
   );
 }

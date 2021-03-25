@@ -4,7 +4,7 @@
 body {
   /* margin: 2px;
   padding: 5px; */
-  /* background-image: url("./images/waves.jpg"); */
+  background-image: url("./images/grandient.jpg");
   font-family: 'sans-serif';
   /* background:fixed; */
   background-repeat: no-repeat;
@@ -32,13 +32,18 @@ box-shadow: orange;
 }
 
 
-.glow {
+/* .glow {
 font-size: 70px;
 color: rgb(26, 34, 94);
 text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
 -webkit-animation: glow 4s ease-in-out infinite alternate;
 -moz-animation: glow 4s ease-in-out infinite alternate;
 animation: glow 4s ease-in-out infinite alternate;
+} */
+
+.glow {
+  font-size: 70px;
+  color:honeydew;
 }
 
 @keyframes glow {
@@ -65,8 +70,8 @@ align-items: center;
 } */
 
 #memberscol{
-  border-style: solid;
-  border-color: #00fff2;
+  /* border-style: solid; */
+  /* border-color: #00fff2; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   opacity: 80%;
 }
@@ -77,4 +82,8 @@ align-items: center;
   font-family:sans-serif;
   font-style: bold;
   color: rgb(255, 219, 140);
+}
+
+.login {
+  padding-bottom: 20rem;
 }
