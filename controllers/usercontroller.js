@@ -1,6 +1,16 @@
 const db = require("../models");
 
 module.exports = {
+    findAll: function(req,res) {
+        console.log("hello");
+        db.User
+          .find({})
+          .then(dbModel => res.json(dbModel))
+          .catch(err => {
+              console.log(err)
+              res.status(422).json(err)
+            });
+    },
     findUser: function(req,res) {
         const user = req.user
         console.log("user controller:",user)

@@ -6,8 +6,7 @@ router.route("/")
   .get(authenticateUser, userController.findUser)
   .post(userController.create);
 
-router
-  .route("/:id")
-  .get(userController.findById);
+router.route("/all")
+  .get(authenticateUser, userController.findAll);
 
 module.exports = router;
