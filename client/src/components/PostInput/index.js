@@ -15,6 +15,7 @@ function PostInput(props) {
             <div className="control">
               <div className="select is-fullwidth">
                 <select name="category" onChange={props.handleCategory} {...props}>
+                  <option></option>
                   <option>Share Content</option>
                   <option>Coding Issues</option>
                   <option>Other</option>

@@ -49,7 +49,7 @@ function Community() {
   return (
 
 <div>
-    <h1 className="glow">CODING COLLECTIVE</h1>
+    <h1 className="">CODING COLLECTIVE</h1>
 
     <Container>
       <Columns>
@@ -57,15 +57,15 @@ function Community() {
         <Sidebar />
       </div>
       <div className="column is-three-quarters" id="post">
-        <PostInput 
+      <PostInput 
         handleTitle={handleInputChange}
         handleContent={handleInputChange}
         handleCategory={handleInputChange}
         handleFormSubmit={handleFormSubmit}
       />
       <Post 
-          posts={posts}
-        />
+        posts={posts}
+      />
       </div>
       </Columns>
     </Container>
