@@ -11,7 +11,7 @@ function Post(props) {
             <article className=" mt-5 message">
               <div className="message-header" >
                 <p>{post.title}</p>
-                <span class="tag is-warning is-light">{post.category}</span>
+                <span className="tag is-warning is-light">{post.category}</span>
               </div>
               <div className="message-body">
                 {post.content}

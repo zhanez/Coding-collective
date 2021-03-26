@@ -79,7 +79,7 @@ export function SignupForm() {
           <input className="input" type="password" ref={passwordRef} placeholder="********" />
         </div>
       </div>
-      <textarea class="textarea" placeholder="Tell Us About You"></textarea>
+      <textarea className="textarea" placeholder="Tell Us About You"></textarea>
 
       <div className="field">
         <label className="label">Github URL</label>
