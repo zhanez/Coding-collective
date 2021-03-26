@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
     return (
-        <div className= "container">
+        <div className= "container mb-5">
             <div className="card">
                 <div className="card-content">
                     <div className="media-content">

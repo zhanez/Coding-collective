@@ -15,22 +15,6 @@ import PrivateRoute from "./components/auth/PrivateRoute"
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h2>Welcome to React</h2>
-//         </div>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
 function App() {
 
   useAuthTokenStore();
@@ -42,7 +26,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Home} />
           <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <GuestRoute exact path="/signup" redirectTo="/community" component={Signup} />
           <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
           <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
           <Route exact path="/about" component={About} />

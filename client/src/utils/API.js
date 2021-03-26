@@ -46,6 +46,10 @@ class API {
   loadUsers() {
       return this.axios.get("/api/user");
   }
+
+  getallUsers() {
+    return this.axios.get("/api/user/all");
+  }
 }
 
 export default new API();

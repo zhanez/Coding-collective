@@ -1,19 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
+import API from "../../utils/API";
+
 
 function Sidebar() {
+  const [users, setUsers] = useState([]);
+    useEffect(() => {
+        loadUsers()
+    }, [])
+
+    function loadUsers() {
+        API.getallUsers()
+            .then(res => {
+                console.log(res.data)
+                setUsers(res.data)
+            }).catch(err => console.log(err));
+    };    
+  console.log(users);
+
   return (
-    <aside className="menu">
+    <aside className="menu pl-6 pt-5">
       <p class="menu-label">
         My Colleagues:
       </p>
       <ul class="menu-list">
-        <li><a>Zhane Zabala</a></li>
-        <li><a>Ellie Fu</a></li>
-        <li><a>Marco Oseguera</a></li>
-        <li><a>Yuwen Yu</a></li>
-        <li><a>Chetan Sekhon</a></li>
+        {users.map(user => <li>{user.firstName} {user.lastName}</li>)}
       </ul>
 
       <p class="menu-label">

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
@@ -48,27 +49,27 @@ function Community() {
 
   return (
 
-<div>
-    <h1 className="glow">CODING COLLECTIVE</h1>
+<div className="mb-6">
+    {/* <h1 className="">CODING COLLECTIVE</h1> */}
 
-    <Container>
+    <div>
       <Columns>
       <div className="column is-one-quarter has-background-white" id="memberscol">
         <Sidebar />
       </div>
       <div className="column is-three-quarters" id="post">
-        <PostInput 
+      <PostInput 
         handleTitle={handleInputChange}
         handleContent={handleInputChange}
         handleCategory={handleInputChange}
         handleFormSubmit={handleFormSubmit}
       />
       <Post 
-          posts={posts}
-        />
+        posts={posts}
+      />
       </div>
       </Columns>
-    </Container>
+    </div>
   </div>
     
   );

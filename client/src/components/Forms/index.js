@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 // import { pass } from "../../../../config/jwtPassportStrategy";
 import api from "../../utils/API";
-import {useLogin} from "../../utils/auth";
+import { useLogin } from "../../utils/auth";
+import { Link } from "react-router-dom";
 
 export function SignupForm() {
   const emailRef = useRef();
@@ -110,7 +111,12 @@ export function SignupForm() {
 
       <div className="buttons is-center">
         <button id="button" className="button is-primary is-hovered" to="/community">Sign Up</button>
-        <button id="button" className="button is-primary is-hovered" to="/">Go Back</button>
+      </div>
+
+      <div className="field has-text-centered">
+        <Link to="/login">
+          Already have an account? Go Sign in!
+        </Link>
       </div>
     </form>
   );
@@ -165,8 +171,11 @@ export function LoginForm() {
           <button id="button" className="button is-primary is-hovered" to="/community">
             Login
           </button>
+          
           <button id="button" className="button is-primary is-hovered">
-            Go Back
+            <Link style={{color: "white"}} to="/">
+              Go Back
+            </Link>
           </button>
         </div>
       </form>
