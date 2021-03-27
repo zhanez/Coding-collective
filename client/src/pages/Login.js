@@ -7,7 +7,7 @@ function Login() {
     <div className="login">
       <h1 className="glow">Sign in</h1>
       <div className="container">
-      <LoginForm />
+        <LoginForm />
       </div>
     </div>
   );

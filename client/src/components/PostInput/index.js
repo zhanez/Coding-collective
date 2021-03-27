@@ -48,7 +48,7 @@ function PostInput(props) {
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label class="label labelcolor">Content    </label>
+          <label className="label labelcolor">Content</label>
         </div>
           <div className="field-body">
             <div className="field">
