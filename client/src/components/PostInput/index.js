@@ -1,11 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
+import API from "../../utils/API";
+import {useIsAuthenticated, useAuthenticatedUser} from "../../utils/auth.js";
 
 function PostInput(props) {
+  const isAuthenticated = useIsAuthenticated();
+  const currentUser = useAuthenticatedUser();
+  console.log(currentUser);
+
+  const [user, setUser] = useState([]);
+  
+    useEffect(() => {
+      loadUser()
+    }, [])
+
+    function loadUser() {
+      API.getClassmate(currentUser._id)
+        .then(res => {
+          console.log(res.data)
+          setUser(res.data)
+        })
+        .catch(err => console.log(err));
+    };
+
   return (
     <form className="postInput pt-5 pr-6">
-      <h2 className="title ">Start your post here:</h2>
+      {isAuthenticated && <h2 className="title ">Start your post here, {user.firstName}:</h2>}
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label labelcolor">Category</label>
