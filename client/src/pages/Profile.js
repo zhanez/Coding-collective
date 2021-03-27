@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import {useParams} from "react-router-dom";
 
 function Profile() {
   const [user, setUser] = useState([]);
+  const urlParams = useParams();
+
   // const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
@@ -10,7 +13,7 @@ function Profile() {
   }, [])
 
   function loadUser() {
-    API.loadUsers()
+    API.getClassmate(urlParams.id)
       .then(res => {
         console.log(res.data)
         setUser(res.data)

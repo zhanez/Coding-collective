@@ -9,4 +9,7 @@ router.route("/")
 router.route("/all")
   .get(authenticateUser, userController.findAll);
 
+router.route("/classmate/:id")
+  .get(userController.findById);
+
 module.exports = router;

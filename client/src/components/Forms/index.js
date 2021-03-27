@@ -81,7 +81,12 @@ export function SignupForm() {
           <input className="input" type="password" ref={passwordRef} placeholder="********" />
         </div>
       </div>
-      <textarea className="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
+
+      <label className="label">Bio</label>
+      <textarea class="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
+
+      {/* <textarea className="textarea" placeholder="Tell Us About You"></textarea> */}
+
 
       <div className="field">
         <label className="label">Github URL</label>
