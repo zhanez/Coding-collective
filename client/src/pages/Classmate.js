@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 
 function ClassmateProfile() {
     const [classmate, setClassmate] = useState([]);
     useEffect(() => {
-        loadUser()
+        loadClassmate()
     }, [])
 
-    function loadUser() {
+    function loadClassmate() {
         API.loadclassmate()
             .then(res => {
                 console.log(res.data)

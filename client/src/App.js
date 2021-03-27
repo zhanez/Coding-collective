@@ -17,20 +17,20 @@ import Footer from "./components/Footer";
 
 function App() {
 
-  useAuthTokenStore();
+  const isDone = useAuthTokenStore();
 
   return (
     <BrowserRouter basename='/'>
       <div>
         <Navbar />
-        <Wrapper>
+        {isDone && <Wrapper>
           <Route exact path="/" component={Home} />
           <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
           <GuestRoute exact path="/signup" redirectTo="/community" component={Signup} />
           <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
-          <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
+          <PrivateRoute exact path="/profile/:id" redirectTo="/login" component={Profile}/>
           <Route exact path="/about" component={About} />
-        </Wrapper>
+        </Wrapper>}
         <Footer />
       </div>
     </BrowserRouter>

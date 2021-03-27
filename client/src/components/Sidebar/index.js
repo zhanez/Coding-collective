@@ -28,19 +28,11 @@ function Sidebar(props) {
       <ul className="menu-list">
         {users.map(user => 
           <li key={user._id}>
-            <a>{user.firstName} {user.lastName}</a>
+            <a href={"/profile/" + user._id}>{user.firstName} {user.lastName}</a>
           </li>
         )}
       </ul>
 
-      {/* <p class="menu-label">
-        Find Posts by Category:
-      </p>
-      <ul class="menu-list">
-        <li><a>Coding Issues</a></li>
-        <li><a>Share Content</a></li>
-        <li><a>Other</a></li>
-      </ul> */}
       <p className="menu-label search-label">Search Posts:</p>
       <div className="field has-addons searchBar">
         <div className="control">
