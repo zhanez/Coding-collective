@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import PostInput from "../components/PostInput";
-import {Container, Columns} from "../components/Grid";
+import { Columns } from "../components/Grid";
 import Post from "../components/Post";
 import feedAPI from "../utils/feedAPI";
 
@@ -61,7 +61,6 @@ function Community() {
   }
 
   return (
-
     <div className="mb-6">
     {/* <h1 className="">CODING COLLECTIVE</h1> */}
 

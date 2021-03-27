@@ -17,6 +17,7 @@ function Sidebar(props) {
           setUsers(res.data)
         }).catch(err => console.log(err));
     };    
+    
   console.log(users);
 
   return (
