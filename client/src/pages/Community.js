@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import PostInput from "../components/PostInput";
-import {Container, Columns} from "../components/Grid";
+import { Columns } from "../components/Grid";
 import Post from "../components/Post";
 import feedAPI from "../utils/feedAPI";
 
 function Community() {
   // Setting our component's initial state
   const [posts, setPosts] = useState([])
+  const [search, setSearch] = useState([])
   const [formObject, setFormObject] = useState({})
 
   // Load all posts and store them with setPosts
@@ -20,9 +21,10 @@ function Community() {
   // Loads all posts and sets them to posts
   function loadPosts() {
     feedAPI.getPosts()
-      .then(res => 
-        setPosts(res.data)
-      )
+      .then(res => {
+        setPosts(res.data);
+        setSearch(res.data);
+      })
       .catch(err => console.log(err));
   };
 
@@ -47,15 +49,27 @@ function Community() {
     }
   };
 
-  return (
+  // handle input to filter posts by title
+  const handleSearch = (event) => {
+    event.preventDefault();
+    let filterTitle = search.filter((search) => 
+      `${search.title}`.toLowerCase().includes(
+          document.querySelector("#post").value.toLowerCase()
+      )
+    );
+    setPosts([...filterTitle]);
+  }
 
-<div className="mb-6">
+  return (
+    <div className="mb-6">
     {/* <h1 className="">CODING COLLECTIVE</h1> */}
 
     <div>
       <Columns>
       <div className="column is-one-quarter has-background-white" id="memberscol">
-        <Sidebar />
+        <Sidebar 
+          handleSearch={handleSearch}
+        />
       </div>
       <div className="column is-three-quarters" id="post">
       <PostInput 
@@ -70,7 +84,7 @@ function Community() {
       </div>
       </Columns>
     </div>
-  </div>
+    </div>
     
   );
 }

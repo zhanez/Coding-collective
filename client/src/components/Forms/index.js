@@ -46,20 +46,20 @@ export function SignupForm() {
   return (
     <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth ">
       <div className="field-group">
- <div className="field is-inline-block-desktop column is-half">
-  <label className="label">First Name</label>
-  <div className="control">
-   <input className="input" ref={firstnameRef} type="text" placeholder="e.g Alex"/>
-  </div>
- </div>
+        <div className="field is-inline-block-desktop column is-half">
+          <label className="label">First Name</label>
+          <div className="control">
+            <input className="input" ref={firstnameRef} type="text" placeholder="e.g Alex"/>
+          </div>
+        </div>
 
-<div className="field is-inline-block-desktop column is-half ">
- <label className="label">Last Name</label>
- <div className="control">
-  <input className="input" ref={lastnameRef} type="text" placeholder="e.g Smith" />
- </div>
- </div>
-</div>
+        <div className="field is-inline-block-desktop column is-half ">
+          <label className="label">Last Name</label>
+          <div className="control">
+            <input className="input" ref={lastnameRef} type="text" placeholder="e.g Smith" />
+          </div>
+        </div>
+      </div>
       
       <div className="field is-inline-block-desktop column is-half">
         <label className="label">Email</label>
@@ -79,8 +79,12 @@ export function SignupForm() {
           <input className="input" type="password" ref={passwordRef} placeholder="********" />
         </div>
       </div>
+
       <label className="label">Bio</label>
       <textarea class="textarea" placeholder="Tell Us About You"></textarea>
+
+      <textarea className="textarea" placeholder="Tell Us About You"></textarea>
+
 
       <div className="field">
         <label className="label">Github URL</label>
@@ -111,7 +115,7 @@ export function SignupForm() {
       </div>
 
       <div className="buttons is-center">
-        <button id="button" className="button is-primary is-hovered" to="/community">Sign Up</button>
+        <button id="button" className="button is-primary is-hovered">Sign Up</button>
       </div>
 
       <div className="field has-text-centered">
@@ -137,13 +141,9 @@ export function LoginForm() {
     const password = passwordRef.current.value;
 
     try {
-
       await login({ email, password });
-      
     } catch(err) {
-      
       if(err.response && err.response.data) console.log(err.response.data);
-
     }
   }
 
@@ -169,10 +169,9 @@ export function LoginForm() {
           </div>
         </div>
         <div className="buttons is-center">
-          <button id="button" className="button is-primary is-hovered" to="/community">
+          <button id="button" className="button is-primary is-hovered">
             Login
           </button>
-          
           <button id="button" className="button is-primary is-hovered">
             <Link style={{color: "white"}} to="/">
               Go Back
