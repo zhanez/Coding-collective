@@ -28,16 +28,17 @@ function Post(props) {
 
               <div className="message-header" >
                 <p>{user.firstName} {user.lastName}</p>
-                <span class="tag is-warning is-light">{post.category}</span>
+              </div>
 
               <div className="message-header">
                 <p>{post.title}</p>
                 <span className="tag is-warning is-light">{post.category}</span>
-
               </div>
+
               <div className="message-body">
                 {post.content}
               </div>
+            
             </article>
           </li>
         ))}
