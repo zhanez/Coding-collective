@@ -5,5 +5,25 @@
 @media screen and (max-width: 576px) {
     .navbar-menu {
         display: block;
+        background-color: rgb(8, 8, 8);
+    }
+
+    .navbar-start {
+        display: flex;
+        justify-content: center;
+    }
+
+    .page {
+        color: white;
+    }
+
+    .navbar-end {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
     }
 }

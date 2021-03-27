@@ -17,7 +17,7 @@ function Sidebar(props) {
           setUsers(res.data)
         }).catch(err => console.log(err));
     };    
-    
+
   console.log(users);
 
   return (
@@ -50,6 +50,7 @@ function Sidebar(props) {
             placeholder="Find a post" 
             onChange={props.handleSearch}
             id="post"
+            style={{ backgroundColor: "whitesmoke" }}
           />
         </div>
         <div className="control">
