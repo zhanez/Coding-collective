@@ -13,6 +13,7 @@ export function SignupForm() {
   const linkedinURLRef = useRef();
   const facebookURLRef = useRef();
   const instagramURLRef = useRef();
+  const introRef = useRef();
 
   // Get the helper login function from the `useLogin` hook.
   const login = useLogin();
@@ -28,10 +29,11 @@ export function SignupForm() {
     const linkedinURL = linkedinURLRef.current.value;
     const facebookURL = facebookURLRef.current.value;
     const instagramURL = instagramURLRef.current.value;
+    const intro = introRef.current.value;
 
     try {
       // Register the user.
-      await api.register({ email, password, firstName, lastName, githubURL, linkedinURL, facebookURL, instagramURL });
+      await api.register({ email, password, firstName, lastName, githubURL, linkedinURL, facebookURL, instagramURL, intro });
 
       // User has been successfully registered, now log them in with the same information.
       await login({ email, password });
@@ -81,9 +83,9 @@ export function SignupForm() {
       </div>
 
       <label className="label">Bio</label>
-      <textarea class="textarea" placeholder="Tell Us About You"></textarea>
+      <textarea class="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
 
-      <textarea className="textarea" placeholder="Tell Us About You"></textarea>
+      {/* <textarea className="textarea" placeholder="Tell Us About You"></textarea> */}
 
 
       <div className="field">
