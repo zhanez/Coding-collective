@@ -51,8 +51,8 @@ class API {
     return this.axios.get("/api/user/all");
   }
 
-  getClassmate() {
-    return this.axios.get("/api/user/classmate/:id")
+  getClassmate(id) {
+    return this.axios.get("/api/user/classmate/" + id)
   }
 }
 
