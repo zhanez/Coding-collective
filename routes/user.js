@@ -3,11 +3,11 @@ const userController = require("../controllers/usercontroller");
 const authenticateUser = require("./middleware/authenticateUser");
 
 router.route("/")
-  .get(userController.findUser)
+  .get(authenticateUser, userController.findUser)
   .post(userController.create);
 
 router.route("/all")
-  .get(userController.findAll);
+  .get(authenticateUser, userController.findAll);
 
 router.route("/classmate/:id")
   .get(userController.findById);
