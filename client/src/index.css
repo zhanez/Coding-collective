@@ -26,7 +26,7 @@ font-weight: bold;
   
 .container {
 color: blue;
-opacity: 97%;
+/* opacity: 97%; */
 box-shadow: orange;
 
 }
