@@ -1,32 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./style.css";
-import API from "../../utils/API";
-import {useIsAuthenticated, useAuthenticatedUser} from "../../utils/auth.js";
 
 function PostInput(props) {
-  const isAuthenticated = useIsAuthenticated();
-  const currentUser = useAuthenticatedUser();
-  console.log(currentUser);
-
-  const [user, setUser] = useState([]);
   
-    useEffect(() => {
-      loadUser()
-    }, [])
-
-    function loadUser() {
-      API.getClassmate(currentUser._id)
-        .then(res => {
-          console.log(res.data)
-          setUser(res.data)
-        })
-        .catch(err => console.log(err));
-    };
-
   return (
     <form className="postInput pt-5 pr-6">
-      {isAuthenticated && <h2 className="title ">Start your post here, {user.firstName}:</h2>}
+      <h2 className="title ">Start your post here, {props.user}:</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label labelcolor">Category</label>
@@ -66,6 +46,25 @@ function PostInput(props) {
           </div>
         </div>
       </div>
+
+      {/* <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label labelcolor">Content</label>
+        </div>
+          <div className="field-body">
+            <div className="field">
+            <div className="control">
+                <textarea 
+                  className="textarea" 
+                  placeholder="Start Something Here" 
+                  name="content"
+                  onChange={props.handleContent}
+                  {...props}
+                />
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
