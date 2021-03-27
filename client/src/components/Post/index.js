@@ -25,9 +25,15 @@ function Post(props) {
         {posts.map(post => (
           <li key={post._id}>
             <article className=" mt-5 message">
+
               <div className="message-header" >
                 <p>{user.firstName} {user.lastName}</p>
                 <span class="tag is-warning is-light">{post.category}</span>
+
+              <div className="message-header">
+                <p>{post.title}</p>
+                <span className="tag is-warning is-light">{post.category}</span>
+
               </div>
               <div className="message-body">
                 {post.content}

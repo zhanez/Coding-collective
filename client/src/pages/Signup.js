@@ -6,7 +6,7 @@ function Signup() {
     <div className="pb-6">
       <h1 className="glow">Create Account</h1>
       <div className="container">
-      <SignupForm />
+        <SignupForm />
       </div>
     </div>
   );
