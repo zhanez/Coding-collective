@@ -16,12 +16,6 @@ function Navbar() {
         <Link className="navbar-item" to="/">
           <img src= {cclogo} alt="logo" width="80" height="28" />
         </Link>
-
-        {/* <div role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </div> */}
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">

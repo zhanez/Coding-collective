@@ -31,7 +31,10 @@ app.get("*", (req, res) => {
 });
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingcollective", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 });
 
 // Syncing our database and logging a message to the user upon success

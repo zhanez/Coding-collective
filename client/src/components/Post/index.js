@@ -4,20 +4,21 @@ import "./style.css";
 
 function Post(props) {
   const { posts } = props;
+  console.log(posts);
 
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
 
-  useEffect(() => {
-    loadUser()
-  }, []);
+  // useEffect(() => {
+  //   loadUser()
+  // }, []);
 
-  function loadUser() {
-    API.loadUsers()
-      .then( res => {
-        console.log(res.data)
-        setUser(res.data)
-      }).catch(err => console.log(err));
-  };
+  // function loadUser() {
+  //   API.loadUsers()
+  //     .then( res => {
+  //       console.log(res.data)
+  //       setUser(res.data)
+  //     }).catch(err => console.log(err));
+  // };
 
   return (
     <div className="pr-6">
@@ -27,7 +28,7 @@ function Post(props) {
             <article className=" mt-5 message">
 
               <div className="message-header" >
-                <p>{user.firstName} {user.lastName}</p>
+                <p>{post.user}</p>
               </div>
 
               <div className="message-header">
