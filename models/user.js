@@ -20,6 +20,10 @@ const UserSchema = new Schema ({
         type: String,
         required: true
     },
+    intro: {
+        type: String,
+        required: false
+    },
     githubURL: {
         type: String,
         required: false

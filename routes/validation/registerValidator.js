@@ -5,6 +5,7 @@ const registerValidator = validatorFactory({
   password: { type: "string", empty: false },
   firstName: { type: "string"},
   lastName: { type: "string"},
+  intro: { type: "string"},
   githubURL: { type: "string"},
   linkedinURL: { type: "string"},
   facebookURL: { type: "string"},
