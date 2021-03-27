@@ -14,7 +14,10 @@ import GuestRoute from "./components/auth/GuestRoute";
 import PrivateRoute from "./components/auth/PrivateRoute"
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+<<<<<<< HEAD
 import ClassmateProfile from "./pages/Classmate";
+=======
+>>>>>>> e5c65c5b8d1de072c6ba795eac2631d0dc9d25f2
 
 function App() {
 
@@ -27,7 +30,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Home} />
           <GuestRoute exact path="/login" redirectTo="/community" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <GuestRoute exact path="/signup" redirectTo="/community" component={Signup} />
           <PrivateRoute exact path="/community" redirectTo="/login" component={Community} />
           <PrivateRoute exact path="/profile" redirectTo="/login" component={Profile} />
           <PrivateRoute exact path="/classmate" component={ClassmateProfile} />

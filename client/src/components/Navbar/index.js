@@ -7,7 +7,6 @@ import { useIsAuthenticated, useLogout } from "../../utils/auth.js";
 
 function Navbar() {
   const isAuthenticated = useIsAuthenticated();
-
   const logout = useLogout();
 
   return (
@@ -17,27 +16,25 @@ function Navbar() {
           <img src= {cclogo} alt="logo" width="80" height="28" />
         </Link>
 
-        <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        {/* <div role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </Link>
+        </div> */}
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <Link className="navbar-item" to="/">
+          <Link className="navbar-item page" to="/">
             Home
           </Link>
-
-          <Link className="navbar-item" to="/community">
+          <Link className="navbar-item page" to="/community">
             Community
           </Link>
-          <Link className="navbar-item" to="/profile">
+          <Link className="navbar-item page" to="/profile">
             Profile
           </Link>
-
-          <Link className="navbar-item" to="/about">
+          <Link className="navbar-item page" to="/about">
             About Us
           </Link>
         </div>
@@ -56,7 +53,6 @@ function Navbar() {
               {isAuthenticated && <Link className="button is-danger" onClick={logout} to="/">
                 Log out
               </Link>}
-
             </div>
           </div>
         </div>

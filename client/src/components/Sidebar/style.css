@@ -5,6 +5,7 @@ p {
 .menu-label{
     font-size: medium;
     font-weight: bold;
+    margin-left: -25px;
     
 }
 
@@ -12,4 +13,11 @@ p {
     margin-bottom: 80px;
 }
 
+.searchBar {
+    margin-left: -30px;
+}
+
+.search-label {
+    padding-top: 2rem;
+}
 
