@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import cclogo from "../Image/cc_shortlogo.gif";
-import { useIsAuthenticated, useLogout } from "../../utils/auth.js";
+import { useIsAuthenticated, useLogout, useAuthenticatedUser } from "../../utils/auth.js";
 
 
 function Navbar() {
   const isAuthenticated = useIsAuthenticated();
   const logout = useLogout();
+  const currentUser = useAuthenticatedUser();
 
   return (
     <nav className="navbar is-black" role="navigation" aria-label="main navigation">
@@ -31,9 +32,9 @@ function Navbar() {
           <Link className="navbar-item page" to="/community">
             Community
           </Link>
-          <Link className="navbar-item page" to="/profile">
+          { currentUser && <Link className="navbar-item page" to={"/profile/" + currentUser._id}>
             Profile
-          </Link>
+          </Link>}
           <Link className="navbar-item page" to="/about">
             About Us
           </Link>
