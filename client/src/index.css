@@ -26,7 +26,6 @@ font-weight: bold;
   
 .container {
 color: blue;
-/* opacity: 97%; */
 box-shadow: orange;
 
 }
@@ -73,7 +72,7 @@ align-items: center;
   /* border-style: solid; */
   /* border-color: #00fff2; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .home{
