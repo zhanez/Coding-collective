@@ -6,6 +6,8 @@ import PostInput from "../components/PostInput";
 import { Columns } from "../components/Grid";
 import Post from "../components/Post";
 import feedAPI from "../utils/feedAPI";
+import {useIsAuthenticated, useAuthenticatedUser} from "../utils/auth.js";
+import API from "../utils/API";
 
 function Community() {
   // Setting our component's initial state
@@ -34,12 +36,32 @@ function Community() {
     setFormObject({...formObject, [name]: value})
   };
 
+  const isAuthenticated = useIsAuthenticated();
+  const currentUser = useAuthenticatedUser();
+  console.log(currentUser);
+
+  const [user, setUser] = useState([]);
+  
+    useEffect(() => {
+      loadUser()
+    }, [])
+
+    function loadUser() {
+      API.getClassmate(currentUser._id)
+        .then(res => {
+          console.log(res.data)
+          setUser(res.data)
+        })
+        .catch(err => console.log(err));
+    };
+
   // When the form is submitted, use the API.savePost method to save the post data
   // Then reload posts from the database
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.title && formObject.content) {
       feedAPI.savePost({
+        user: user.firstName,
         title: formObject.title,
         content: formObject.content,
         category: formObject.category
@@ -73,6 +95,7 @@ function Community() {
       </div>
       <div className="column is-three-quarters" id="post">
       <PostInput 
+        user = {user.firstName}
         handleTitle={handleInputChange}
         handleContent={handleInputChange}
         handleCategory={handleInputChange}

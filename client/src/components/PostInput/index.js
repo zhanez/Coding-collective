@@ -3,9 +3,10 @@ import React from "react";
 import "./style.css";
 
 function PostInput(props) {
+  
   return (
     <form className="postInput pt-5 pr-6">
-      <h2 className="title ">Start your post here:</h2>
+      <h2 className="title ">Start your post here, {props.user}:</h2>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label labelcolor">Category</label>
@@ -45,6 +46,25 @@ function PostInput(props) {
           </div>
         </div>
       </div>
+
+      {/* <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label labelcolor">Content</label>
+        </div>
+          <div className="field-body">
+            <div className="field">
+            <div className="control">
+                <textarea 
+                  className="textarea" 
+                  placeholder="Start Something Here" 
+                  name="content"
+                  onChange={props.handleContent}
+                  {...props}
+                />
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <div className="field is-horizontal">
         <div className="field-label is-normal">
