@@ -46,7 +46,7 @@ export function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth ">
+    <form onSubmit={handleSubmit} className="box column is-three-fifths is-offset-one-fifth">
       <div className="field-group">
         <div className="field is-inline-block-desktop column is-half">
           <label className="label">First Name</label>
@@ -83,7 +83,7 @@ export function SignupForm() {
       </div>
 
       <label className="label">Bio</label>
-      <textarea class="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
+      <textarea className="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
 
       {/* <textarea className="textarea" placeholder="Tell Us About You"></textarea> */}
 

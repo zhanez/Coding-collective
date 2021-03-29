@@ -27,3 +27,10 @@ label{
 .labelcolor {
     color: white;
 }
+
+@media screen and (max-width: 576px) {
+    form {
+        padding-left: 3rem;
+        padding-top: 0%;
+    }
+}

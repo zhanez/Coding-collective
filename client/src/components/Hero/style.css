@@ -42,3 +42,9 @@
 .hero button {
     margin-top: -350px;
 }
+
+@media screen and (max-width: 576px) {
+    .hero button {
+        margin-left: 12px;
+    }
+}

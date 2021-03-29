@@ -23,7 +23,7 @@ function Profile() {
   };
 
   return (
-    <div className="mt-5 mb-5 container">
+    <div className="mt-5 mb-5 container profile">
       <div className="tile is-ancestor">
         <div className="tile is-4 is-vertical is-parent">
           <div className="tile is-child box">
@@ -39,7 +39,7 @@ function Profile() {
         
           <div className="tile is-child box">
             <p className="title">Contact</p>
-            <div className="columns">
+            <div className="columns contact">
               <div className="column">
                 <a href={user.linkedinURL}><i className="fab fa-linkedin-in iconSize"></i></a>
               </div>
