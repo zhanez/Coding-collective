@@ -58,7 +58,7 @@ animation: glow 4s ease-in-out infinite alternate;
 
 #memberscol{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .home{
@@ -73,9 +73,14 @@ animation: glow 4s ease-in-out infinite alternate;
   padding-bottom: 20rem;
 }
 
+.description {
+  line-height: 1.5;
+  padding-top: 5px;
+}
+
 @media screen and (max-width: 576px) {
   .profile, .about {
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 30px;
   }
 
   .contact {
