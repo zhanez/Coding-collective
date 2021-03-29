@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
@@ -6,7 +6,7 @@ import PostInput from "../components/PostInput";
 import { Columns } from "../components/Grid";
 import Post from "../components/Post";
 import feedAPI from "../utils/feedAPI";
-import {useIsAuthenticated, useAuthenticatedUser} from "../utils/auth.js";
+import { useAuthenticatedUser } from "../utils/auth.js";
 import API from "../utils/API";
 
 function Community() {
@@ -36,7 +36,7 @@ function Community() {
     setFormObject({...formObject, [name]: value})
   };
 
-  const isAuthenticated = useIsAuthenticated();
+  // const isAuthenticated = useIsAuthenticated();
   const currentUser = useAuthenticatedUser();
   console.log(currentUser);
 
@@ -88,11 +88,11 @@ function Community() {
 
     <div>
       <Columns>
-      <div className="column is-one-quarter has-background-white" id="memberscol">
+      {/* <div className="column is-one-quarter has-background-white" id="memberscol"> */}
         <Sidebar 
           handleSearch={handleSearch}
         />
-      </div>
+      {/* </div> */}
       <div className="column is-three-quarters" id="post">
       <PostInput 
         user = {user.firstName}

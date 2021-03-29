@@ -21,8 +21,8 @@ function Sidebar(props) {
   console.log(users);
 
   return (
-    <aside className="menu pl-6 pt-5">
-      <p className="menu-label">
+    <aside className="menu pl-6 pt-5 column is-one-quarter has-background-white" id="memberscol">
+      <p className="menu-label pl-2">
         My Colleagues:
       </p>
       <ul className="menu-list">
@@ -33,8 +33,8 @@ function Sidebar(props) {
         )}
       </ul>
 
-      <p className="menu-label search-label">Search Posts:</p>
-      <div className="field has-addons searchBar">
+      <p className="menu-label search-label pl-2">Search Posts:</p>
+      <div className="field has-addons searchBar pl-2">
         <div className="control">
           <input 
             className="input" 

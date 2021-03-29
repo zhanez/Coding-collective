@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-import API from "../../utils/API";
+import React from "react";
 import "./style.css";
 
 function Post(props) {
@@ -21,11 +20,11 @@ function Post(props) {
   // };
 
   return (
-    <div className="pr-6">
+    <div className="pr-6 mt-6">
       <ul>
         {posts.map(post => (
           <li key={post._id}>
-            <article className=" mt-5 message">
+            <article className=" mt-6 message">
 
               <div className="message-header" >
                 <p>{post.user}</p>

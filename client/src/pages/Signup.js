@@ -3,7 +3,7 @@ import {SignupForm} from "../components/Forms";
 
 function Signup() {
   return (
-    <div className="pb-6">
+    <div className="pb-6 sign-up">
       <h1 className="glow">Create Account</h1>
       <div className="container">
         <SignupForm />
