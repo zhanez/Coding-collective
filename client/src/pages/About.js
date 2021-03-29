@@ -35,7 +35,7 @@ function About() {
         <div className="card-content">
           <div className="media-content">
             <p className="title is-4">Zhane Zabala</p>
-            <p className="subtitle is-6">Github: @zhanez</p>
+            <p className="subtitle is-6">Github: <a href="https://github.com/zhanez" target="_blank" rel="noreferrer">@zhanez</a></p>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ function About() {
         <div className="card-content">
           <div className="media-content">
             <p className="title is-4">Marco Oseguera</p>
-            <p className="subtitle is-6">Github: @Bejarano03</p>
+            <p className="subtitle is-6">Github: <a href="https://github.com/Bejarano03" target="_blank" rel="noreferrer">@Bejarano03</a></p>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ function About() {
         <div className="card-content">
           <div className="media-content">
             <p className="title is-4">Yuwen Yu</p>
-            <p className="subtitle is-6">Github: @ywen26</p>
+            <p className="subtitle is-6">Github: <a href="https://github.com/ywen26" target="_blank" rel="noreferrer">@ywen26</a></p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ function About() {
         <div className="card-content">
           <div className="media-content">
             <p className="title is-4">Chetan Sekhon</p>
-            <p className="subtitle is-6">Github: @Chetansekhon</p>
+            <p className="subtitle is-6">Github: <a href="https://github.com/Chetansekhon" target="_blank" rel="noreferrer">@Chetansekhon</a></p>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ function About() {
         <div className="card-content">
           <div className="media-content">
             <p className="title is-4">Ellie Fu-Hinthorn</p>
-            <p className="subtitle is-6">Github: @elliefh</p>
+            <p className="subtitle is-6">Github: <a href="https://github.com/elliefh" target="_blank" rel="noreferrer">@elliefh</a></p>
           </div>
         </div>
       </div>
