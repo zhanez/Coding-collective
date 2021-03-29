@@ -12,7 +12,9 @@
   - [License](#license)
 
 ## Description
-The Coding Collective is a mobile and web application that... 
+Coding Collective is a web and mobile responsive application that provides a central hub where coding bootcamp students can connect and collaborate with one another, even after graduation. When we heard that there will be a Slack channel for our cohort after graduation, we realized that we could build something better and more meaningful. Although Slack is helpful as a messaging tool,  it is not designed to help us keep in touch, share resources and provide feedback, since messages disappear pretty quickly.
+
+Recognizing that learning doesn’t stop after graduation, we created the Coding Collective so that we can continue to grow and improve as developers together!
 
 This application was created with the following User Story and Acceptance Criteria in mind:
 ```
@@ -26,17 +28,21 @@ WHEN I create an account
 THEN my account is saved in the database and I securely log into my community page
 WHEN I am brought to my community page
 THEN I see a newsfeed of posts shared by my bootcamp classmates and an area to create a new post
-WHEN I create a new post...
-THEN ...
-WHEN I click on my profile...
-THEN I see...
-WHEN...
-THEN...
+WHEN I create a new post
+THEN it is saved in MongoDB and it is displayed on the community newsfeed
+WHEN I click on my profile
+THEN I see my profile picture, about me section, and the github, linkedin, facebook, instagram icons are all linked to my own URLs
+WHEN I click on my classmate's name
+THEN I see their unique profile
+WHEN I am not logged in
+THEN I see the "Sign Up" and "Log In" buttons on the Navbar, and I am re-routed to the Sign Up page when I try clicking on the Community or Profile pages 
+WHEN I am logged in
+THEN I see the "Log Out" button on the Navbar and I can view the Community and Profile pages
 ```
 
 ## Project-Location
-* [Repository] (https://github.com/zhanez/Coding-collective)
-* [Deployed] ()
+* [Repository](https://github.com/zhanez/Coding-collective)
+* [Deployed](https://coding-collective.herokuapp.com)
   
 ## Dependencies
 The dependencies are:
@@ -75,8 +81,11 @@ See Screenshots:
 
 ## Future-Direction
 Some future add-ons that would enhance our application include:
-- Messaging Function
-- 
+- Messaging Function between users 
+- Filter categories for posts (e.g., "coding issues", "share content")
+- Expand beyond our cohort, so that users can search resources in other cohorts (e.g., 2020 Fall Full-time cohort, 2020-2021 Part-Time cohort)
+- Comment section, like/dislike buttons for posts 
+- Add edit section for profile
 
 ## Credits
 - Zhane Zabala (https://github.com/zhanez/)
@@ -87,7 +96,8 @@ Some future add-ons that would enhance our application include:
   
 ## Resources
 - [Bulma] (https://bulma.io)
-- 
+- [Multer]
+- [Authentication]
 
 ## License
 Copyright (c) [2021] [Zhane Zabala, Marco Oseguera, Yuwen Yu, Chetan Sekhon, Ellie Fu-Hinthorn]
