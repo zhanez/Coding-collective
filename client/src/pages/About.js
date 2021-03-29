@@ -14,10 +14,10 @@ function About() {
               provide feedback, and learn from one another. Although our cohort has a Slack channel, 
               messages there are easily lost and consequently valuable resources, interesting projects, etc. 
               become inaccessible. We hope that the Coding Collective can serve as a central location for 
-              our peers to stay in touch! Check out our repo here: 
-              <a href="https://github.com/zhanez/Coding-collective/tree/e06ecfbf2401ee4cf43d47a89f706371c44141b4" target="_blank" rel="noreferrer">
-                GitHub Repository
-              </a>
+              our peers to stay in touch! 
+            </p>
+            <p className="subtitle is-6">
+            Check out our repo here: <a href="https://github.com/zhanez/Coding-collective" target="_blank" rel="noreferrer">GitHub Repository</a>
             </p>
           </div>
         </div>

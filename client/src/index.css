@@ -19,7 +19,6 @@ h1 {
   
 .container {
 color: blue;
-opacity: 97%;
 box-shadow: orange;
 
 }
@@ -59,7 +58,7 @@ animation: glow 4s ease-in-out infinite alternate;
 
 #memberscol{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  opacity: 100%;
+  opacity: 0.8;
 }
 
 .home{
