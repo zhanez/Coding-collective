@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// Use API routes
 app.use(require("./routes/upload") );
 app.use(routes);
 
@@ -30,6 +31,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+// Connect to Database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingcollective", 
   {
     useNewUrlParser: true,
@@ -40,12 +42,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingcollectiv
 );
 
 // Syncing our database and logging a message to the user upon success
-// db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
-// });
+app.listen(PORT, () => {
+  console.log(
+    "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+    PORT,
+    PORT
+  );
+});
+

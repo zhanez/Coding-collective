@@ -42,18 +42,18 @@ function Community() {
 
   const [user, setUser] = useState([]);
   
-    useEffect(() => {
-      loadUser()
-    }, [])
+  useEffect(() => {
+    loadUser()
+  }, [])
 
-    function loadUser() {
-      API.getClassmate(currentUser._id)
-        .then(res => {
-          console.log(res.data)
-          setUser(res.data)
-        })
-        .catch(err => console.log(err));
-    };
+  function loadUser() {
+    API.getClassmate(currentUser._id)
+      .then(res => {
+        console.log(res.data)
+        setUser(res.data)
+      })
+      .catch(err => console.log(err));
+  };
 
   // When the form is submitted, use the API.savePost method to save the post data
   // Then reload posts from the database
@@ -66,8 +66,8 @@ function Community() {
         content: formObject.content,
         category: formObject.category
       })
-        .then(res => loadPosts())
-        .catch(err => console.log(err));
+      .then(res => loadPosts())
+      .catch(err => console.log(err));
     }
   };
 
@@ -76,7 +76,7 @@ function Community() {
     event.preventDefault();
     let filterTitle = search.filter((search) => 
       `${search.title}`.toLowerCase().includes(
-          document.querySelector("#post").value.toLowerCase()
+        document.querySelector("#post").value.toLowerCase()
       )
     );
     setPosts([...filterTitle]);
@@ -84,31 +84,27 @@ function Community() {
 
   return (
     <div className="mb-6">
-    <h1 className="glow">CODING COLLECTIVE</h1>
-
-    <div>
-      <Columns>
-      {/* <div className="column is-one-quarter has-background-white" id="memberscol"> */}
-        <Sidebar 
-          handleSearch={handleSearch}
-        />
-      {/* </div> */}
-      <div className="column is-three-quarters" id="post">
-      <PostInput 
-        user = {user.firstName}
-        handleTitle={handleInputChange}
-        handleContent={handleInputChange}
-        handleCategory={handleInputChange}
-        handleFormSubmit={handleFormSubmit}
-      />
-      <Post 
-        posts={posts}
-      />
+      <h1 className="glow">CODING COLLECTIVE</h1>
+      <div>
+        <Columns>
+          <Sidebar 
+            handleSearch={handleSearch}
+          />
+          <div className="column is-three-quarters" id="post">
+            <PostInput 
+              user = {user.firstName}
+              handleTitle={handleInputChange}
+              handleContent={handleInputChange}
+              handleCategory={handleInputChange}
+              handleFormSubmit={handleFormSubmit}
+            />
+            <Post 
+              posts={posts}
+            />
+          </div>
+        </Columns>
       </div>
-      </Columns>
-    </div>
-    </div>
-    
+    </div>  
   );
 }
 

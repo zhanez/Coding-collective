@@ -9,7 +9,7 @@ export function Container(props) {
 }
 
 export function Columns(props) {
-    return (
-        <div className="columns is-desktop">{props.children}</div>
-    );
+  return (
+    <div className="columns is-desktop">{props.children}</div>
+  );
 }

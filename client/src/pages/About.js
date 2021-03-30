@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -21,7 +20,6 @@ function About() {
             </p>
           </div>
         </div>
-      
 
         <div className="tile is-4 is-vertical is-parent">
           <div className="tile is-child box">

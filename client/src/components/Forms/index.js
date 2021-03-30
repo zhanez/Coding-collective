@@ -17,7 +17,6 @@ export function SignupForm() {
 
   // Get the helper login function from the `useLogin` hook.
   const login = useLogin();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -85,9 +84,6 @@ export function SignupForm() {
       <label className="label">Bio</label>
       <textarea className="textarea" ref={introRef} placeholder="Tell Us About You"></textarea>
 
-      {/* <textarea className="textarea" placeholder="Tell Us About You"></textarea> */}
-
-
       <div className="field">
         <label className="label">Github URL</label>
         <div className="control">
@@ -130,7 +126,6 @@ export function SignupForm() {
 }
 
 export function LoginForm() {
-
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -138,7 +133,6 @@ export function LoginForm() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 

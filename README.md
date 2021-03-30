@@ -3,6 +3,7 @@
 - [Coding-collective](#coding-collective)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
+  - [Functionality-and-Appearance](#Functionality-and-Appearance)
   - [Project-Location](#project-location)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
@@ -39,6 +40,16 @@ THEN I see the "Sign Up" and "Log In" buttons on the Navbar, and I am re-routed 
 WHEN I am logged in
 THEN I see the "Log Out" button on the Navbar and I can view the Community and Profile pages
 ```
+
+## Functionality-and-Appearance
+Homepage:
+![Demo](./client/src/images/ss-1.png)
+
+Community page for posts:
+![Demo](./client/src/images/ss-2.png)
+
+User profile page:
+![Demo](./client/src/images/ss-3.png)
 
 ## Project-Location
 * [Repository](https://github.com/zhanez/Coding-collective)

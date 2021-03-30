@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 
 function ClassmateProfile() {
-    const [classmate, setClassmate] = useState([]);
-    useEffect(() => {
-        loadClassmate()
-    }, [])
+  const [classmate, setClassmate] = useState([]);
+  useEffect(() => {
+    loadClassmate()
+  }, [])
 
-    function loadClassmate() {
-        API.loadclassmate()
-            .then(res => {
-                console.log(res.data)
-                setClassmate(res.data)
-            }).catch(err => console.log(err));
-    };    
+  function loadClassmate() {
+    API.loadclassmate()
+      .then(res => {
+        console.log(res.data)
+        setClassmate(res.data)
+      }).catch(err => console.log(err));
+  };    
     
-    return (
+  return (
     <div className="container">
       <div className="tile is-ancestor">
         <div className="tile is-4 is-vertical is-parent">
@@ -55,7 +55,7 @@ function ClassmateProfile() {
         </div>
       </div>
     </div>
-    )
+  );
 }
 
 export default ClassmateProfile;

@@ -1,7 +1,6 @@
 import React from "react";
 import {LoginForm} from "../components/Forms";
 
-
 function Login() {
   return (
     <div className="log-in">

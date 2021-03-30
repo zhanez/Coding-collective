@@ -20,9 +20,7 @@ const jwtSign = util.promisify( jwt.sign );
 
 // Get the currently authenticated user
 router.post("/authenticated", authenticateUser, (req, res) => {
-
   res.json( req.user );
-
 });
 
 /**
@@ -30,11 +28,8 @@ router.post("/authenticated", authenticateUser, (req, res) => {
  * for the client application to store and include with requests.
  */
 router.post("/login", validateBodyWith( loginValidator ), async (req, res) => {
-
   const { email, password } = req.body;
-
   try {
-
     const user =
       await User
         .findOne({ email })
@@ -81,23 +76,17 @@ router.post("/login", validateBodyWith( loginValidator ), async (req, res) => {
   
 
   } catch( err ) {
-
     console.log(err);
     res.status(500).json({ default: "Something went wrong trying to log in." });
-
   }
-
 });
 
 /**
  * Creates a new user for authentication
  */
 router.post("/register", validateBodyWith( registerValidator ), async (req, res) => {
-
   try {
-
     const { firstName, lastName, email, password, intro, githubURL, linkedinURL, facebookURL, instagramURL} = req.body;
-
     const user = await User.findOne({ email });
 
     if (user) {
@@ -128,12 +117,9 @@ router.post("/register", validateBodyWith( registerValidator ), async (req, res)
     res.json( secureUser );
 
   } catch( err ) {
-
     console.log(err);
     res.status(500).json({ default: "Something went wrong creating your account." });
-
   }
-
 });
 
 module.exports = router;
