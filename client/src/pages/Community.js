@@ -84,7 +84,7 @@ function Community() {
 
   return (
     <div className="mb-6">
-    {/* <h1 className="">CODING COLLECTIVE</h1> */}
+    <h1 className="glow">CODING COLLECTIVE</h1>
 
     <div>
       <Columns>
