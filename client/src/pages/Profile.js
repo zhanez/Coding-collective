@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Profile() {
   const [user, setUser] = useState([]);
   const urlParams = useParams();
-
-  // const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
     loadUser()
@@ -66,4 +64,5 @@ function Profile() {
     </div>
   );
 }
+
 export default Profile;

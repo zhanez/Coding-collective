@@ -47,25 +47,6 @@ function PostInput(props) {
         </div>
       </div>
 
-      {/* <div className="field is-horizontal">
-        <div className="field-label is-normal">
-          <label className="label labelcolor">Content</label>
-        </div>
-          <div className="field-body">
-            <div className="field">
-            <div className="control">
-                <textarea 
-                  className="textarea" 
-                  placeholder="Start Something Here" 
-                  name="content"
-                  onChange={props.handleContent}
-                  {...props}
-                />
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="field is-horizontal">
         <div className="field-label is-normal">
           <label className="label labelcolor">Content</label>

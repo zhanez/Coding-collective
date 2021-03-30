@@ -10,13 +10,13 @@ function Sidebar(props) {
       loadUsers()
     }, [])
 
-    function loadUsers() {
-      API.getallUsers()
-        .then(res => {
-          console.log(res.data)
-          setUsers(res.data)
-        }).catch(err => console.log(err));
-    };    
+  function loadUsers() {
+    API.getallUsers()
+      .then(res => {
+        console.log(res.data)
+        setUsers(res.data)
+      }).catch(err => console.log(err));
+  };    
 
   console.log(users);
 

@@ -11,7 +11,6 @@ function Post(props) {
         {posts.map(post => (
           <li key={post._id}>
             <article className=" mt-6 message">
-
               <div className="message-header" >
                 <p>From: {post.user}</p>
                 <span className="tag is-warning is-light">{post.category}</span>
@@ -24,7 +23,6 @@ function Post(props) {
               <div className="message-body">
                 {post.content}
               </div>
-            
             </article>
           </li>
         ))}
